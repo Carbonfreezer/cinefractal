@@ -1,0 +1,444 @@
+:py:mod:`cinefractal`
+=====================
+
+.. py:module:: cinefractal
+
+.. autodoc2-docstring:: cinefractal
+   :parser: myst
+   :allowtitles:
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. list-table::
+   :class: autosummary longtable
+   :align: left
+
+   * - :py:obj:`AnimationPlayer <cinefractal.AnimationPlayer>`
+     - .. autodoc2-docstring:: cinefractal.AnimationPlayer
+          :parser: myst
+          :summary:
+   * - :py:obj:`AnimationRecorder <cinefractal.AnimationRecorder>`
+     - .. autodoc2-docstring:: cinefractal.AnimationRecorder
+          :parser: myst
+          :summary:
+   * - :py:obj:`ColorSystem <cinefractal.ColorSystem>`
+     - .. autodoc2-docstring:: cinefractal.ColorSystem
+          :parser: myst
+          :summary:
+   * - :py:obj:`FocalPointResult <cinefractal.FocalPointResult>`
+     - .. autodoc2-docstring:: cinefractal.FocalPointResult
+          :parser: myst
+          :summary:
+   * - :py:obj:`FocalSystemInterface <cinefractal.FocalSystemInterface>`
+     - .. autodoc2-docstring:: cinefractal.FocalSystemInterface
+          :parser: myst
+          :summary:
+   * - :py:obj:`FractalType <cinefractal.FractalType>`
+     - .. autodoc2-docstring:: cinefractal.FractalType
+          :parser: myst
+          :summary:
+   * - :py:obj:`IterationFieldInterface <cinefractal.IterationFieldInterface>`
+     - .. autodoc2-docstring:: cinefractal.IterationFieldInterface
+          :parser: myst
+          :summary:
+   * - :py:obj:`PathGenerationCriterion <cinefractal.PathGenerationCriterion>`
+     - .. autodoc2-docstring:: cinefractal.PathGenerationCriterion
+          :parser: myst
+          :summary:
+
+Data
+~~~~
+
+.. list-table::
+   :class: autosummary longtable
+   :align: left
+
+   * - :py:obj:`__all__ <cinefractal.__all__>`
+     - .. autodoc2-docstring:: cinefractal.__all__
+          :parser: myst
+          :summary:
+
+API
+~~~
+
+.. py:data:: __all__
+   :canonical: cinefractal.__all__
+   :value: ['AnimationPlayer', 'AnimationRecorder', 'ColorSystem', 'FocalPointResult', 'FocalSystemInterface', ...
+
+   .. autodoc2-docstring:: cinefractal.__all__
+      :parser: myst
+
+.. py:class:: AnimationPlayer
+   :canonical: cinefractal.AnimationPlayer
+
+   .. autodoc2-docstring:: cinefractal.AnimationPlayer
+      :parser: myst
+
+   .. py:method:: max_time() -> float
+      :canonical: cinefractal.AnimationPlayer.max_time
+
+      .. autodoc2-docstring:: cinefractal.AnimationPlayer.max_time
+         :parser: myst
+
+   .. py:method:: apply_animation(time: float, interface: cinefractal.IterationFieldInterface) -> None
+      :canonical: cinefractal.AnimationPlayer.apply_animation
+
+      .. autodoc2-docstring:: cinefractal.AnimationPlayer.apply_animation
+         :parser: myst
+
+.. py:class:: AnimationRecorder
+   :canonical: cinefractal.AnimationRecorder
+
+   .. autodoc2-docstring:: cinefractal.AnimationRecorder
+      :parser: myst
+
+   .. py:method:: __new__(exponent: int = 2, julia_start_real: float = 0.0, julia_start_imag: float = 0.0, center_point_real: float = 0.0, center_point_imag: float = 0.0, extension: float = 1.5, max_iterations: int = 1000, log_strength: float = 0.0) -> cinefractal.AnimationRecorder
+      :canonical: cinefractal.AnimationRecorder.__new__
+
+      .. autodoc2-docstring:: cinefractal.AnimationRecorder.__new__
+         :parser: myst
+
+   .. py:method:: set_keyframe_exponent(time: float, exponent: int) -> None
+      :canonical: cinefractal.AnimationRecorder.set_keyframe_exponent
+
+      .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_exponent
+         :parser: myst
+
+   .. py:method:: set_keyframe_fractal_seed_value(time: float, real: float, imag: float) -> None
+      :canonical: cinefractal.AnimationRecorder.set_keyframe_fractal_seed_value
+
+      .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_fractal_seed_value
+         :parser: myst
+
+   .. py:method:: set_keyframe_render_center_point(time: float, real: float, imag: float) -> None
+      :canonical: cinefractal.AnimationRecorder.set_keyframe_render_center_point
+
+      .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_render_center_point
+         :parser: myst
+
+   .. py:method:: set_keyframe_extension(time: float, extension: float) -> None
+      :canonical: cinefractal.AnimationRecorder.set_keyframe_extension
+
+      .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_extension
+         :parser: myst
+
+   .. py:method:: set_keyframe_max_iterations(time: float, max_iter: int) -> None
+      :canonical: cinefractal.AnimationRecorder.set_keyframe_max_iterations
+
+      .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_max_iterations
+         :parser: myst
+
+   .. py:method:: set_keyframe_log_strength(time: float, log_strength: float) -> None
+      :canonical: cinefractal.AnimationRecorder.set_keyframe_log_strength
+
+      .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_log_strength
+         :parser: myst
+
+   .. py:method:: get_animation_player() -> cinefractal.AnimationPlayer
+      :canonical: cinefractal.AnimationRecorder.get_animation_player
+
+      .. autodoc2-docstring:: cinefractal.AnimationRecorder.get_animation_player
+         :parser: myst
+
+.. py:class:: ColorSystem
+   :canonical: cinefractal.ColorSystem
+
+   .. autodoc2-docstring:: cinefractal.ColorSystem
+      :parser: myst
+
+   .. py:method:: turbo() -> cinefractal.ColorSystem
+      :canonical: cinefractal.ColorSystem.turbo
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.ColorSystem.turbo
+         :parser: myst
+
+   .. py:method:: viridis() -> cinefractal.ColorSystem
+      :canonical: cinefractal.ColorSystem.viridis
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.ColorSystem.viridis
+         :parser: myst
+
+   .. py:method:: magma() -> cinefractal.ColorSystem
+      :canonical: cinefractal.ColorSystem.magma
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.ColorSystem.magma
+         :parser: myst
+
+   .. py:method:: plasma() -> cinefractal.ColorSystem
+      :canonical: cinefractal.ColorSystem.plasma
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.ColorSystem.plasma
+         :parser: myst
+
+   .. py:method:: inferno() -> cinefractal.ColorSystem
+      :canonical: cinefractal.ColorSystem.inferno
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.ColorSystem.inferno
+         :parser: myst
+
+   .. py:method:: cool() -> cinefractal.ColorSystem
+      :canonical: cinefractal.ColorSystem.cool
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.ColorSystem.cool
+         :parser: myst
+
+   .. py:method:: cyclical(repetition_factor: float = 3.0) -> cinefractal.ColorSystem
+      :canonical: cinefractal.ColorSystem.cyclical
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.ColorSystem.cyclical
+         :parser: myst
+
+   .. py:method:: __repr__() -> str
+      :canonical: cinefractal.ColorSystem.__repr__
+
+.. py:class:: FocalPointResult
+   :canonical: cinefractal.FocalPointResult
+
+   .. autodoc2-docstring:: cinefractal.FocalPointResult
+      :parser: myst
+
+   .. py:method:: get_focal_points_with_evaluation() -> list[tuple[float, float, float]]
+      :canonical: cinefractal.FocalPointResult.get_focal_points_with_evaluation
+
+      .. autodoc2-docstring:: cinefractal.FocalPointResult.get_focal_points_with_evaluation
+         :parser: myst
+
+   .. py:method:: get_path_from_start_point(criterion: cinefractal.PathGenerationCriterion, start_real: float = 0.0, start_imag: float = 0.0) -> list[tuple[float, float]]
+      :canonical: cinefractal.FocalPointResult.get_path_from_start_point
+
+      .. autodoc2-docstring:: cinefractal.FocalPointResult.get_path_from_start_point
+         :parser: myst
+
+   .. py:method:: get_path_from_start_point_with_distance(criterion: cinefractal.PathGenerationCriterion, start_real: float = 0.0, start_imag: float = 0.0) -> list[tuple[float, float, float]]
+      :canonical: cinefractal.FocalPointResult.get_path_from_start_point_with_distance
+
+      .. autodoc2-docstring:: cinefractal.FocalPointResult.get_path_from_start_point_with_distance
+         :parser: myst
+
+.. py:class:: FocalSystemInterface
+   :canonical: cinefractal.FocalSystemInterface
+
+   .. autodoc2-docstring:: cinefractal.FocalSystemInterface
+      :parser: myst
+
+   .. py:method:: __new__(center_point_real: float = 0.0, center_point_imag: float = 0.0, extension: float = 1.5, extension_min: float = 0.0, evaluation_extension: float = 1.5, max_iterations: int = 1000) -> cinefractal.FocalSystemInterface
+      :canonical: cinefractal.FocalSystemInterface.__new__
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.__new__
+         :parser: myst
+
+   .. py:method:: set_fractal_type(fractal_type: cinefractal.FractalType) -> None
+      :canonical: cinefractal.FocalSystemInterface.set_fractal_type
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.set_fractal_type
+         :parser: myst
+
+   .. py:method:: set_fractal_exponent(exponent: int = 2) -> None
+      :canonical: cinefractal.FocalSystemInterface.set_fractal_exponent
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.set_fractal_exponent
+         :parser: myst
+
+   .. py:method:: set_fractal_seed_value(real: float = 0.0, imag: float = 0.0) -> None
+      :canonical: cinefractal.FocalSystemInterface.set_fractal_seed_value
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.set_fractal_seed_value
+         :parser: myst
+
+   .. py:method:: set_maximum_iterations(maximum_iterations: int = 1000) -> None
+      :canonical: cinefractal.FocalSystemInterface.set_maximum_iterations
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.set_maximum_iterations
+         :parser: myst
+
+   .. py:method:: set_center_point(real: float = 0.0, imag: float = 0.0) -> None
+      :canonical: cinefractal.FocalSystemInterface.set_center_point
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.set_center_point
+         :parser: myst
+
+   .. py:method:: set_extension(extension: float = 1.5) -> None
+      :canonical: cinefractal.FocalSystemInterface.set_extension
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.set_extension
+         :parser: myst
+
+   .. py:method:: set_extension_min(extension_min: float = 0.0) -> None
+      :canonical: cinefractal.FocalSystemInterface.set_extension_min
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.set_extension_min
+         :parser: myst
+
+   .. py:method:: set_evaluation_extension(evaluation_extension: float = 1.5) -> None
+      :canonical: cinefractal.FocalSystemInterface.set_evaluation_extension
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.set_evaluation_extension
+         :parser: myst
+
+   .. py:method:: create_collection_of_points(num_of_points: int) -> cinefractal.FocalPointResult
+      :canonical: cinefractal.FocalSystemInterface.create_collection_of_points
+
+      .. autodoc2-docstring:: cinefractal.FocalSystemInterface.create_collection_of_points
+         :parser: myst
+
+.. py:class:: FractalType
+   :canonical: cinefractal.FractalType
+
+   .. autodoc2-docstring:: cinefractal.FractalType
+      :parser: myst
+
+   .. py:method:: mandelbrot() -> cinefractal.FractalType
+      :canonical: cinefractal.FractalType.mandelbrot
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.FractalType.mandelbrot
+         :parser: myst
+
+   .. py:method:: julia() -> cinefractal.FractalType
+      :canonical: cinefractal.FractalType.julia
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.FractalType.julia
+         :parser: myst
+
+   .. py:method:: burning_ship() -> cinefractal.FractalType
+      :canonical: cinefractal.FractalType.burning_ship
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.FractalType.burning_ship
+         :parser: myst
+
+   .. py:method:: tricorn() -> cinefractal.FractalType
+      :canonical: cinefractal.FractalType.tricorn
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.FractalType.tricorn
+         :parser: myst
+
+   .. py:method:: celtic() -> cinefractal.FractalType
+      :canonical: cinefractal.FractalType.celtic
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.FractalType.celtic
+         :parser: myst
+
+   .. py:method:: __repr__() -> str
+      :canonical: cinefractal.FractalType.__repr__
+
+.. py:class:: IterationFieldInterface
+   :canonical: cinefractal.IterationFieldInterface
+
+   .. autodoc2-docstring:: cinefractal.IterationFieldInterface
+      :parser: myst
+
+   .. py:method:: __new__() -> cinefractal.IterationFieldInterface
+      :canonical: cinefractal.IterationFieldInterface.__new__
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.__new__
+         :parser: myst
+
+   .. py:method:: set_numpy_extension(rows: int, columns: int) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_numpy_extension
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_numpy_extension
+         :parser: myst
+
+   .. py:method:: set_fractal_type(fractal_type: cinefractal.FractalType) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_fractal_type
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_fractal_type
+         :parser: myst
+
+   .. py:method:: set_fractal_exponent(exponent: int = 2) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_fractal_exponent
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_fractal_exponent
+         :parser: myst
+
+   .. py:method:: set_fractal_seed_value(real: float = 0.0, imag: float = 0.0) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_fractal_seed_value
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_fractal_seed_value
+         :parser: myst
+
+   .. py:method:: set_maximum_iterations(maximum_iterations: int = 1000) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_maximum_iterations
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_maximum_iterations
+         :parser: myst
+
+   .. py:method:: set_center_point(real: float = 0.0, imag: float = 0.0) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_center_point
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_center_point
+         :parser: myst
+
+   .. py:method:: set_extension(extension: float = 1.5) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_extension
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_extension
+         :parser: myst
+
+   .. py:method:: set_colorization_information(color_system: cinefractal.ColorSystem, uses_discrete_for_color: bool = False) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_colorization_information
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_colorization_information
+         :parser: myst
+
+   .. py:method:: set_colorization_log_strength(log_strength: float = 0.0) -> None
+      :canonical: cinefractal.IterationFieldInterface.set_colorization_log_strength
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.set_colorization_log_strength
+         :parser: myst
+
+   .. py:method:: get_discrete_iteration_field() -> numpy.typing.NDArray[numpy.uint16]
+      :canonical: cinefractal.IterationFieldInterface.get_discrete_iteration_field
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.get_discrete_iteration_field
+         :parser: myst
+
+   .. py:method:: get_continuous_iteration_field() -> numpy.typing.NDArray[numpy.float32]
+      :canonical: cinefractal.IterationFieldInterface.get_continuous_iteration_field
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.get_continuous_iteration_field
+         :parser: myst
+
+   .. py:method:: get_color_field() -> numpy.typing.NDArray[numpy.uint8]
+      :canonical: cinefractal.IterationFieldInterface.get_color_field
+
+      .. autodoc2-docstring:: cinefractal.IterationFieldInterface.get_color_field
+         :parser: myst
+
+.. py:class:: PathGenerationCriterion
+   :canonical: cinefractal.PathGenerationCriterion
+
+   .. autodoc2-docstring:: cinefractal.PathGenerationCriterion
+      :parser: myst
+
+   .. py:method:: short_path() -> cinefractal.PathGenerationCriterion
+      :canonical: cinefractal.PathGenerationCriterion.short_path
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.PathGenerationCriterion.short_path
+         :parser: myst
+
+   .. py:method:: descending_value() -> cinefractal.PathGenerationCriterion
+      :canonical: cinefractal.PathGenerationCriterion.descending_value
+      :staticmethod:
+
+      .. autodoc2-docstring:: cinefractal.PathGenerationCriterion.descending_value
+         :parser: myst
+
+   .. py:method:: __repr__() -> str
+      :canonical: cinefractal.PathGenerationCriterion.__repr__

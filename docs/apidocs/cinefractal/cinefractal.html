@@ -1,0 +1,711 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cinefractal &mdash; cinefractal  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Overview" href="../../overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            cinefractal
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api">API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.__all__"><code class="docutils literal notranslate"><span class="pre">__all__</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.AnimationPlayer"><code class="docutils literal notranslate"><span class="pre">AnimationPlayer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.AnimationRecorder"><code class="docutils literal notranslate"><span class="pre">AnimationRecorder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.ColorSystem"><code class="docutils literal notranslate"><span class="pre">ColorSystem</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.FocalPointResult"><code class="docutils literal notranslate"><span class="pre">FocalPointResult</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.FocalSystemInterface"><code class="docutils literal notranslate"><span class="pre">FocalSystemInterface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.FractalType"><code class="docutils literal notranslate"><span class="pre">FractalType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.IterationFieldInterface"><code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinefractal.PathGenerationCriterion"><code class="docutils literal notranslate"><span class="pre">PathGenerationCriterion</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">cinefractal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cinefractal</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/apidocs/cinefractal/cinefractal.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-cinefractal">
+<span id="cinefractal"></span><h1><a class="reference internal" href="#module-cinefractal" title="cinefractal"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cinefractal</span></code></a><a class="headerlink" href="#module-cinefractal" title="Link to this heading"></a></h1>
+<p>This module provides functionality to generate images and movies from fractals. It has three main building blocks. One for generating fractal images, one for animation and one for finding interesting focus points. For details see https://github.com/Carbonfreezer/fractal_python.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-left">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cinefractal.AnimationPlayer" title="cinefractal.AnimationPlayer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnimationPlayer</span></code></a></p></td>
+<td><p>Immutable animation produced by <code class="docutils literal notranslate"><span class="pre">AnimationRecorder.get_animation_player()</span></code>.
+Applies the animated values at a given time onto an <code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code>;
+reading a color field or an iteration field afterwards is up to the caller.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cinefractal.AnimationRecorder" title="cinefractal.AnimationRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnimationRecorder</span></code></a></p></td>
+<td><p>Builder for an animation. Key frames are added in this open state; calling
+[<code class="docutils literal notranslate"><span class="pre">get_animation_player</span></code>][AnimationRecorder.get_animation_player] freezes
+every track and returns an immutable <code class="docutils literal notranslate"><span class="pre">AnimationPlayer</span></code> that applies the
+animation to an <code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ColorSystem</span></code></a></p></td>
+<td><p>Color scheme used to render the fractal. Supports different base colors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cinefractal.FocalPointResult" title="cinefractal.FocalPointResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FocalPointResult</span></code></a></p></td>
+<td><p>Immutable result of an autofocus search, produced by
+<code class="docutils literal notranslate"><span class="pre">FocalSystemInterface.create_collection_of_points()</span></code>. Holds the best focal
+points and can hand them back either unordered (with their scores) or as an
+ordered path ready to drive an <code class="docutils literal notranslate"><span class="pre">AnimationRecorder</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cinefractal.FocalSystemInterface" title="cinefractal.FocalSystemInterface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FocalSystemInterface</span></code></a></p></td>
+<td><p>Builder for an autofocus search. The fractal, search region and evaluation
+scale are configured through the micro setters; calling
+[<code class="docutils literal notranslate"><span class="pre">create_collection_of_points</span></code>][Self.create_collection_of_points] runs the
+(parallel) search and returns an immutable <code class="docutils literal notranslate"><span class="pre">FocalPointResult</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cinefractal.FractalType" title="cinefractal.FractalType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FractalType</span></code></a></p></td>
+<td><p>The kind of fractal to render. A pure tag – the exponent and the Julia seed
+value are set separately on the <code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code> via
+<code class="docutils literal notranslate"><span class="pre">set_fractal_exponent</span></code> and <code class="docutils literal notranslate"><span class="pre">set_fractal_seed_value</span></code>. The latter is
+only relevant for the julia set visualization.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cinefractal.IterationFieldInterface" title="cinefractal.IterationFieldInterface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code></a></p></td>
+<td><p>Main interface for computing fractals. This is the entry point for generating images and
+iteration fields. A base is setup with default parameters, that can be adjusted by individual methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cinefractal.PathGenerationCriterion" title="cinefractal.PathGenerationCriterion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PathGenerationCriterion</span></code></a></p></td>
+<td><p>How focal points are ordered when a path through them is requested.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data">
+<h3>Data<a class="headerlink" href="#data" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-left">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cinefractal.__all__" title="cinefractal.__all__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__all__</span></code></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="api">
+<h3>API<a class="headerlink" href="#api" title="Link to this heading"></a></h3>
+<dl class="py data">
+<dt class="sig sig-object py" id="cinefractal.__all__">
+<span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">__all__</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['AnimationPlayer',</span> <span class="pre">'AnimationRecorder',</span> <span class="pre">'ColorSystem',</span> <span class="pre">'FocalPointResult',</span> <span class="pre">'FocalSystemInterface',</span> <span class="pre">...</span></span><a class="headerlink" href="#cinefractal.__all__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cinefractal.AnimationPlayer">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">AnimationPlayer</span></span><a class="headerlink" href="#cinefractal.AnimationPlayer" title="Link to this definition"></a></dt>
+<dd><p>Immutable animation produced by <code class="docutils literal notranslate"><span class="pre">AnimationRecorder.get_animation_player()</span></code>.
+Applies the animated values at a given time onto an <code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code>;
+reading a color field or an iteration field afterwards is up to the caller.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationPlayer.max_time">
+<span class="sig-name descname"><span class="pre">max_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#cinefractal.AnimationPlayer.max_time" title="Link to this definition"></a></dt>
+<dd><p>The end time of the animation: the latest key frame time across all
+tracks. Useful as the total duration when rendering or looping.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationPlayer.apply_animation">
+<span class="sig-name descname"><span class="pre">apply_animation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cinefractal.IterationFieldInterface" title="cinefractal.IterationFieldInterface"><span class="pre">cinefractal.IterationFieldInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.AnimationPlayer.apply_animation" title="Link to this definition"></a></dt>
+<dd><p>Applies all animated values at <code class="docutils literal notranslate"><span class="pre">time</span></code> to the given field interface.
+After this call the interface reflects the animated state and the usual
+<code class="docutils literal notranslate"><span class="pre">get_color_field</span></code> / <code class="docutils literal notranslate"><span class="pre">get_*_iteration_field</span></code> methods can be used.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">AnimationRecorder</span></span><a class="headerlink" href="#cinefractal.AnimationRecorder" title="Link to this definition"></a></dt>
+<dd><p>Builder for an animation. Key frames are added in this open state; calling
+[<code class="docutils literal notranslate"><span class="pre">get_animation_player</span></code>][AnimationRecorder.get_animation_player] freezes
+every track and returns an immutable <code class="docutils literal notranslate"><span class="pre">AnimationPlayer</span></code> that applies the
+animation to an <code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code>.</p>
+<p>The constructor seeds time 0. Its defaults mirror those of
+<code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code>, so an unconfigured animation starts on the same
+frame as an unconfigured field interface.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cinefractal</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnimationRecorder</span><span class="p">,</span> <span class="n">IterationFieldInterface</span><span class="p">,</span> <span class="n">FractalType</span><span class="p">,</span> <span class="n">ColorSystem</span>
+
+<span class="n">anim</span> <span class="o">=</span> <span class="n">AnimationRecorder</span><span class="p">(</span><span class="n">exponent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">log_strength</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+<span class="n">anim</span><span class="o">.</span><span class="n">set_keyframe_fractal_seed_value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.27</span><span class="p">)</span>
+<span class="n">anim</span><span class="o">.</span><span class="n">set_keyframe_extension</span><span class="p">(</span><span class="mf">6.0</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">)</span>
+<span class="n">animation</span> <span class="o">=</span> <span class="n">anim</span><span class="o">.</span><span class="n">get_animation_player</span><span class="p">()</span>
+
+<span class="n">ifi</span> <span class="o">=</span> <span class="n">IterationFieldInterface</span><span class="p">()</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_fractal_type</span><span class="p">(</span><span class="n">FractalType</span><span class="o">.</span><span class="n">julia</span><span class="p">())</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_information</span><span class="p">(</span><span class="n">ColorSystem</span><span class="o">.</span><span class="n">inferno</span><span class="p">(),</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="n">animation</span><span class="o">.</span><span class="n">apply_animation</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">ifi</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">ifi</span><span class="o">.</span><span class="n">get_color_field</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder.__new__">
+<span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">julia_start_real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">julia_start_imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center_point_real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center_point_imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_strength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.AnimationRecorder" title="cinefractal.AnimationRecorder"><span class="pre">cinefractal.AnimationRecorder</span></a></span></span><a class="headerlink" href="#cinefractal.AnimationRecorder.__new__" title="Link to this definition"></a></dt>
+<dd><p>Creates a new animation builder seeded at time 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder.set_keyframe_exponent">
+<span class="sig-name descname"><span class="pre">set_keyframe_exponent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.AnimationRecorder.set_keyframe_exponent" title="Link to this definition"></a></dt>
+<dd><p>Adds a key frame for the iteration exponent. The exponent must be at
+least 2. The exponent is the exponent used in the escape time iteration formula.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder.set_keyframe_fractal_seed_value">
+<span class="sig-name descname"><span class="pre">set_keyframe_fractal_seed_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.AnimationRecorder.set_keyframe_fractal_seed_value" title="Link to this definition"></a></dt>
+<dd><p>Adds a key frame for the fractal value. The Julia fractal is the only fractal, that
+has a start value as an additional parameter. One has to add real and imaginary parts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder.set_keyframe_render_center_point">
+<span class="sig-name descname"><span class="pre">set_keyframe_render_center_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.AnimationRecorder.set_keyframe_render_center_point" title="Link to this definition"></a></dt>
+<dd><p>Adds a key frame for the render center point. This is the point in the complex
+number pane, that will be in the center of the image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder.set_keyframe_extension">
+<span class="sig-name descname"><span class="pre">set_keyframe_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.AnimationRecorder.set_keyframe_extension" title="Link to this definition"></a></dt>
+<dd><p>Adds a key frame for the extension (zoom). Interpolated in logarithmic
+space, so the extension must be strictly positive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder.set_keyframe_max_iterations">
+<span class="sig-name descname"><span class="pre">set_keyframe_max_iterations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.AnimationRecorder.set_keyframe_max_iterations" title="Link to this definition"></a></dt>
+<dd><p>Adds a key frame for the maximum number of iterations used in the escape iteration.
+Higher values mean more computation time but also more detailed fractal borders.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder.set_keyframe_log_strength">
+<span class="sig-name descname"><span class="pre">set_keyframe_log_strength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_strength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.AnimationRecorder.set_keyframe_log_strength" title="Link to this definition"></a></dt>
+<dd><p>Adds a key frame for the color log strength. The higher the log strength the more detailed
+the regions with low iteration values will be.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.AnimationRecorder.get_animation_player">
+<span class="sig-name descname"><span class="pre">get_animation_player</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.AnimationPlayer" title="cinefractal.AnimationPlayer"><span class="pre">cinefractal.AnimationPlayer</span></a></span></span><a class="headerlink" href="#cinefractal.AnimationRecorder.get_animation_player" title="Link to this definition"></a></dt>
+<dd><p>Freezes the current state into an immutable, queryable
+<code class="docutils literal notranslate"><span class="pre">AnimationPlayer</span></code>. The builder is cloned internally, so it stays
+usable afterwards: you can keep adding key frames and get another player,
+or reuse it as a template for several players.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">ColorSystem</span></span><a class="headerlink" href="#cinefractal.ColorSystem" title="Link to this definition"></a></dt>
+<dd><p>Color scheme used to render the fractal. Supports different base colors.</p>
+<ul class="simple">
+<li><p>Turbo</p></li>
+<li><p>Viridis</p></li>
+<li><p>Magma</p></li>
+<li><p>Plasma</p></li>
+<li><p>Inferno</p></li>
+<li><p>Cool</p></li>
+<li><p>cyclical : This is a rainbow like color scale with a repetition factor.</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span> <span class="o">=</span> <span class="n">ColorSystem</span><span class="o">.</span><span class="n">viridis</span><span class="p">()</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">ColorSystem</span><span class="o">.</span><span class="n">cyclical</span><span class="p">(</span><span class="n">repetition_factor</span><span class="o">=</span><span class="mf">3.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem.turbo">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">turbo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><span class="pre">cinefractal.ColorSystem</span></a></span></span><a class="headerlink" href="#cinefractal.ColorSystem.turbo" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem.viridis">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">viridis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><span class="pre">cinefractal.ColorSystem</span></a></span></span><a class="headerlink" href="#cinefractal.ColorSystem.viridis" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem.magma">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">magma</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><span class="pre">cinefractal.ColorSystem</span></a></span></span><a class="headerlink" href="#cinefractal.ColorSystem.magma" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem.plasma">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">plasma</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><span class="pre">cinefractal.ColorSystem</span></a></span></span><a class="headerlink" href="#cinefractal.ColorSystem.plasma" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem.inferno">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">inferno</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><span class="pre">cinefractal.ColorSystem</span></a></span></span><a class="headerlink" href="#cinefractal.ColorSystem.inferno" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem.cool">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">cool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><span class="pre">cinefractal.ColorSystem</span></a></span></span><a class="headerlink" href="#cinefractal.ColorSystem.cool" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem.cyclical">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">cyclical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repetition_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><span class="pre">cinefractal.ColorSystem</span></a></span></span><a class="headerlink" href="#cinefractal.ColorSystem.cyclical" title="Link to this definition"></a></dt>
+<dd><p>Cyclical color scheme with a configurable repetition factor.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">repetition_factor</span></code>: Repetition factor for cyclic color.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.ColorSystem.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cinefractal.ColorSystem.__repr__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cinefractal.FocalPointResult">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">FocalPointResult</span></span><a class="headerlink" href="#cinefractal.FocalPointResult" title="Link to this definition"></a></dt>
+<dd><p>Immutable result of an autofocus search, produced by
+<code class="docutils literal notranslate"><span class="pre">FocalSystemInterface.create_collection_of_points()</span></code>. Holds the best focal
+points and can hand them back either unordered (with their scores) or as an
+ordered path ready to drive an <code class="docutils literal notranslate"><span class="pre">AnimationRecorder</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalPointResult.get_focal_points_with_evaluation">
+<span class="sig-name descname"><span class="pre">get_focal_points_with_evaluation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cinefractal.FocalPointResult.get_focal_points_with_evaluation" title="Link to this definition"></a></dt>
+<dd><p>All focal points with their evaluation, unordered.
+Returns a list of <code class="docutils literal notranslate"><span class="pre">(real,</span> <span class="pre">imag,</span> <span class="pre">score)</span></code> tuples.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalPointResult.get_path_from_start_point">
+<span class="sig-name descname"><span class="pre">get_path_from_start_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">criterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cinefractal.PathGenerationCriterion" title="cinefractal.PathGenerationCriterion"><span class="pre">cinefractal.PathGenerationCriterion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cinefractal.FocalPointResult.get_path_from_start_point" title="Link to this definition"></a></dt>
+<dd><p>An ordered path through the focal points, starting at the given point.
+Returns a list of <code class="docutils literal notranslate"><span class="pre">(real,</span> <span class="pre">imag)</span></code> tuples; the start point is the first
+element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalPointResult.get_path_from_start_point_with_distance">
+<span class="sig-name descname"><span class="pre">get_path_from_start_point_with_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">criterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cinefractal.PathGenerationCriterion" title="cinefractal.PathGenerationCriterion"><span class="pre">cinefractal.PathGenerationCriterion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cinefractal.FocalPointResult.get_path_from_start_point_with_distance" title="Link to this definition"></a></dt>
+<dd><p>Like <code class="docutils literal notranslate"><span class="pre">get_path_from_start_point</span></code>, but each element is additionally
+annotated with the cumulative distance travelled along the path.
+Returns a list of <code class="docutils literal notranslate"><span class="pre">(real,</span> <span class="pre">imag,</span> <span class="pre">cumulative_distance)</span></code> tuples.
+Useful for timing an animation (e.g. constant-speed camera travel).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">FocalSystemInterface</span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface" title="Link to this definition"></a></dt>
+<dd><p>Builder for an autofocus search. The fractal, search region and evaluation
+scale are configured through the micro setters; calling
+[<code class="docutils literal notranslate"><span class="pre">create_collection_of_points</span></code>][Self.create_collection_of_points] runs the
+(parallel) search and returns an immutable <code class="docutils literal notranslate"><span class="pre">FocalPointResult</span></code>.</p>
+<p>Mirrors <code class="docutils literal notranslate"><span class="pre">AnimationRecorder</span></code>: this object stays usable after producing a
+result, so you can tweak parameters and search again, or reuse it as a
+template for several searches.</p>
+<p>The constructor seeds the same defaults as an unconfigured
+<code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code>, so an autofocus run lines up with the field you
+intend to render.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cinefractal</span><span class="w"> </span><span class="kn">import</span> <span class="n">FocalSystemInterface</span><span class="p">,</span> <span class="n">FractalType</span>
+
+<span class="n">focus</span> <span class="o">=</span> <span class="n">FocalSystemInterface</span><span class="p">(</span><span class="n">max_iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">focus</span><span class="o">.</span><span class="n">set_fractal_type</span><span class="p">(</span><span class="n">FractalType</span><span class="o">.</span><span class="n">mandelbrot</span><span class="p">())</span>
+<span class="n">focus</span><span class="o">.</span><span class="n">set_center_point</span><span class="p">(</span><span class="o">-</span><span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">focus</span><span class="o">.</span><span class="n">set_extension</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>        <span class="c1"># search radius</span>
+<span class="n">focus</span><span class="o">.</span><span class="n">set_evaluation_extension</span><span class="p">(</span><span class="mf">1e-3</span><span class="p">)</span>   <span class="c1"># the render extension the points are judged at</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">focus</span><span class="o">.</span><span class="n">create_collection_of_points</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_focal_points_with_evaluation</span><span class="p">()</span>   <span class="c1"># list of (re, im, score)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.__new__">
+<span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center_point_real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center_point_imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension_min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evaluation_extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.FocalSystemInterface" title="cinefractal.FocalSystemInterface"><span class="pre">cinefractal.FocalSystemInterface</span></a></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.__new__" title="Link to this definition"></a></dt>
+<dd><p>Creates a new focal-system builder with default parameters:
+Mandelbrot (exponent 2), center 0, search extension 1.5,
+evaluation extension 1.5, no inner search radius, 1000 iterations.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.set_fractal_type">
+<span class="sig-name descname"><span class="pre">set_fractal_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fractal_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cinefractal.FractalType" title="cinefractal.FractalType"><span class="pre">cinefractal.FractalType</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.set_fractal_type" title="Link to this definition"></a></dt>
+<dd><p>Sets the fractal type to search in (mandelbrot, julia, …).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.set_fractal_exponent">
+<span class="sig-name descname"><span class="pre">set_fractal_exponent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.set_fractal_exponent" title="Link to this definition"></a></dt>
+<dd><p>Sets the iteration exponent. Must be at least 2. The exponent is the exponent used in
+the escape time iteration formula.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.set_fractal_seed_value">
+<span class="sig-name descname"><span class="pre">set_fractal_seed_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.set_fractal_seed_value" title="Link to this definition"></a></dt>
+<dd><p>Sets the Julia seed (start) value. Only relevant for the Julia set. The Julia fractal is the only fractal, that
+has a start value as an additional parameter. One has to add real and imaginary parts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.set_maximum_iterations">
+<span class="sig-name descname"><span class="pre">set_maximum_iterations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maximum_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.set_maximum_iterations" title="Link to this definition"></a></dt>
+<dd><p>Sets the maximum number of iterations used when sampling candidates.
+Higher values mean more computation time but also more detailed fractal borders.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.set_center_point">
+<span class="sig-name descname"><span class="pre">set_center_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.set_center_point" title="Link to this definition"></a></dt>
+<dd><p>Sets the center of the circular search region in the complex number pane.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.set_extension">
+<span class="sig-name descname"><span class="pre">set_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.set_extension" title="Link to this definition"></a></dt>
+<dd><p>Sets the outer search radius (and therefore the maximum distance of a
+candidate from the center). Must stay strictly greater than the current
+inner radius (<code class="docutils literal notranslate"><span class="pre">extension_min</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.set_extension_min">
+<span class="sig-name descname"><span class="pre">set_extension_min</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extension_min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.set_extension_min" title="Link to this definition"></a></dt>
+<dd><p>Sets the inner search radius. Candidates are scattered in the annulus
+between <code class="docutils literal notranslate"><span class="pre">extension_min</span></code> and <code class="docutils literal notranslate"><span class="pre">extension</span></code>. Defaults to 0 (full disc).
+Must satisfy <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">extension_min</span> <span class="pre">&lt;</span> <span class="pre">extension</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.set_evaluation_extension">
+<span class="sig-name descname"><span class="pre">set_evaluation_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evaluation_extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.set_evaluation_extension" title="Link to this definition"></a></dt>
+<dd><p>Sets the evaluation extension: the rendering extension (the view’s
+half-width in the complex plane) at which a candidate’s local detail is
+measured. It should match the extension you later render the points at –
+note that a smaller value means a deeper zoom. Independent of the search
+extension (<code class="docutils literal notranslate"><span class="pre">set_extension</span></code>), which is usually larger.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FocalSystemInterface.create_collection_of_points">
+<span class="sig-name descname"><span class="pre">create_collection_of_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_of_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.FocalPointResult" title="cinefractal.FocalPointResult"><span class="pre">cinefractal.FocalPointResult</span></a></span></span><a class="headerlink" href="#cinefractal.FocalSystemInterface.create_collection_of_points" title="Link to this definition"></a></dt>
+<dd><p>Runs the search and returns the best <code class="docutils literal notranslate"><span class="pre">num_of_points</span></code> candidates as an
+immutable <code class="docutils literal notranslate"><span class="pre">FocalPointResult</span></code>. The heavy, parallel work releases the GIL.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cinefractal.FractalType">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">FractalType</span></span><a class="headerlink" href="#cinefractal.FractalType" title="Link to this definition"></a></dt>
+<dd><p>The kind of fractal to render. A pure tag – the exponent and the Julia seed
+value are set separately on the <code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code> via
+<code class="docutils literal notranslate"><span class="pre">set_fractal_exponent</span></code> and <code class="docutils literal notranslate"><span class="pre">set_fractal_seed_value</span></code>. The latter is
+only relevant for the julia set visualization.</p>
+<p>Supported types:</p>
+<ul class="simple">
+<li><p>mandelbrot</p></li>
+<li><p>julia (uses the seed value)</p></li>
+<li><p>burning_ship</p></li>
+<li><p>tricorn</p></li>
+<li><p>celtic</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cinefractal</span><span class="w"> </span><span class="kn">import</span> <span class="n">FractalType</span>
+
+<span class="n">ft</span> <span class="o">=</span> <span class="n">FractalType</span><span class="o">.</span><span class="n">julia</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FractalType.mandelbrot">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">mandelbrot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.FractalType" title="cinefractal.FractalType"><span class="pre">cinefractal.FractalType</span></a></span></span><a class="headerlink" href="#cinefractal.FractalType.mandelbrot" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FractalType.julia">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">julia</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.FractalType" title="cinefractal.FractalType"><span class="pre">cinefractal.FractalType</span></a></span></span><a class="headerlink" href="#cinefractal.FractalType.julia" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FractalType.burning_ship">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">burning_ship</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.FractalType" title="cinefractal.FractalType"><span class="pre">cinefractal.FractalType</span></a></span></span><a class="headerlink" href="#cinefractal.FractalType.burning_ship" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FractalType.tricorn">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">tricorn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.FractalType" title="cinefractal.FractalType"><span class="pre">cinefractal.FractalType</span></a></span></span><a class="headerlink" href="#cinefractal.FractalType.tricorn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FractalType.celtic">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">celtic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.FractalType" title="cinefractal.FractalType"><span class="pre">cinefractal.FractalType</span></a></span></span><a class="headerlink" href="#cinefractal.FractalType.celtic" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.FractalType.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cinefractal.FractalType.__repr__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">IterationFieldInterface</span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface" title="Link to this definition"></a></dt>
+<dd><p>Main interface for computing fractals. This is the entry point for generating images and
+iteration fields. A base is setup with default parameters, that can be adjusted by individual methods.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cinefractal</span><span class="w"> </span><span class="kn">import</span> <span class="n">IterationFieldInterface</span><span class="p">,</span> <span class="n">FractalType</span><span class="p">,</span> <span class="n">ColorSystem</span>
+
+<span class="n">ifi</span> <span class="o">=</span> <span class="n">IterationFieldInterface</span><span class="p">()</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_numpy_extension</span><span class="p">(</span><span class="mi">768</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_fractal_type</span><span class="p">(</span><span class="n">FractalType</span><span class="o">.</span><span class="n">mandelbrot</span><span class="p">())</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_fractal_exponent</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_information</span><span class="p">(</span><span class="n">ColorSystem</span><span class="o">.</span><span class="n">viridis</span><span class="p">(),</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">ifi</span><span class="o">.</span><span class="n">get_color_field</span><span class="p">()</span>   <span class="c1"># numpy array (rows, cols, 3), dtype=uint8</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.__new__">
+<span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.IterationFieldInterface" title="cinefractal.IterationFieldInterface"><span class="pre">cinefractal.IterationFieldInterface</span></a></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.__new__" title="Link to this definition"></a></dt>
+<dd><p>Creates a new instance with default values:
+1024×768, Mandelbrot (exponent 2), Viridis, discrete coloring, no log scaling.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_numpy_extension">
+<span class="sig-name descname"><span class="pre">set_numpy_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_numpy_extension" title="Link to this definition"></a></dt>
+<dd><p>Sets the output size in pixels</p>
+<ul class="simple">
+<li><p>rows = height</p></li>
+<li><p>columns = width</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_fractal_type">
+<span class="sig-name descname"><span class="pre">set_fractal_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fractal_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cinefractal.FractalType" title="cinefractal.FractalType"><span class="pre">cinefractal.FractalType</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_fractal_type" title="Link to this definition"></a></dt>
+<dd><p>Sets the fractal type to render.</p>
+<ul class="simple">
+<li><p>fractal_type: a <code class="docutils literal notranslate"><span class="pre">FractalType</span></code> (mandelbrot, julia, …)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_fractal_exponent">
+<span class="sig-name descname"><span class="pre">set_fractal_exponent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_fractal_exponent" title="Link to this definition"></a></dt>
+<dd><p>Sets the iteration exponent. Must be at least 2. The exponent is the exponent
+used in the escape time iteration formula.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_fractal_seed_value">
+<span class="sig-name descname"><span class="pre">set_fractal_seed_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_fractal_seed_value" title="Link to this definition"></a></dt>
+<dd><p>Sets the Julia seed (start) value. The Julia fractal is the only fractal, that
+has a start value as an additional parameter. One has to add real and imaginary parts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_maximum_iterations">
+<span class="sig-name descname"><span class="pre">set_maximum_iterations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maximum_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_maximum_iterations" title="Link to this definition"></a></dt>
+<dd><p>Sets the maximum number of iterations used in the escape iteration.
+Higher values mean more computation time but also more detailed fractal borders.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_center_point">
+<span class="sig-name descname"><span class="pre">set_center_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_center_point" title="Link to this definition"></a></dt>
+<dd><p>Sets the center point in the complex plane. This is the point in the complex
+number pane, that will be in the center of the image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_extension">
+<span class="sig-name descname"><span class="pre">set_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_extension" title="Link to this definition"></a></dt>
+<dd><p>Sets the extension (inverse zoom factor) in the complex plane.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_colorization_information">
+<span class="sig-name descname"><span class="pre">set_colorization_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cinefractal.ColorSystem" title="cinefractal.ColorSystem"><span class="pre">cinefractal.ColorSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">uses_discrete_for_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_colorization_information" title="Link to this definition"></a></dt>
+<dd><p>Sets the color scheme and discrete/continuous mode.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">color_system</span></code>: the desired color scheme</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uses_discrete_for_color</span></code>: True = discrete iteration counts, False = continuous</p></li>
+</ul>
+<p>The logarithmic color strength is set separately with
+<code class="docutils literal notranslate"><span class="pre">set_colorization_log_strength</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.set_colorization_log_strength">
+<span class="sig-name descname"><span class="pre">set_colorization_log_strength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_strength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.set_colorization_log_strength" title="Link to this definition"></a></dt>
+<dd><p>Sets the strength of the logarithmic color scaling (0.0 = off).</p>
+<p>Note: when an animation is applied to this interface, this value is
+driven by the animation’s log strength track and overwritten each frame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.get_discrete_iteration_field">
+<span class="sig-name descname"><span class="pre">get_discrete_iteration_field</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint16</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.get_discrete_iteration_field" title="Link to this definition"></a></dt>
+<dd><p>Returns the discrete iteration field (shape: rows × cols, dtype: uint16).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.get_continuous_iteration_field">
+<span class="sig-name descname"><span class="pre">get_continuous_iteration_field</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float32</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.get_continuous_iteration_field" title="Link to this definition"></a></dt>
+<dd><p>Returns the continuous iteration field (shape: rows × cols, dtype: float32).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.IterationFieldInterface.get_color_field">
+<span class="sig-name descname"><span class="pre">get_color_field</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cinefractal.IterationFieldInterface.get_color_field" title="Link to this definition"></a></dt>
+<dd><p>Returns the RGB color image (shape: rows × cols × 3, dtype: uint8).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cinefractal.PathGenerationCriterion">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cinefractal.</span></span><span class="sig-name descname"><span class="pre">PathGenerationCriterion</span></span><a class="headerlink" href="#cinefractal.PathGenerationCriterion" title="Link to this definition"></a></dt>
+<dd><p>How focal points are ordered when a path through them is requested.</p>
+<p>A pure tag, mirroring <code class="docutils literal notranslate"><span class="pre">FractalType</span></code>. Pick the construction strategy via the
+static methods.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">short_path</span></code>: a reasonably short tour (greedy TSP approximation), starting
+at the point closest to the supplied start point. Good for smooth camera
+travel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">descending_value</span></code>: most-interesting point first, down to the least
+interesting. Good for a “highlight reel” ordering. The start point is
+ignored for ordering but still prepended to the resulting path.</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cinefractal</span><span class="w"> </span><span class="kn">import</span> <span class="n">PathGenerationCriterion</span>
+
+<span class="n">crit</span> <span class="o">=</span> <span class="n">PathGenerationCriterion</span><span class="o">.</span><span class="n">short_path</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.PathGenerationCriterion.short_path">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">short_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.PathGenerationCriterion" title="cinefractal.PathGenerationCriterion"><span class="pre">cinefractal.PathGenerationCriterion</span></a></span></span><a class="headerlink" href="#cinefractal.PathGenerationCriterion.short_path" title="Link to this definition"></a></dt>
+<dd><p>Greedy short tour starting from the point nearest the start point.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.PathGenerationCriterion.descending_value">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">descending_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cinefractal.PathGenerationCriterion" title="cinefractal.PathGenerationCriterion"><span class="pre">cinefractal.PathGenerationCriterion</span></a></span></span><a class="headerlink" href="#cinefractal.PathGenerationCriterion.descending_value" title="Link to this definition"></a></dt>
+<dd><p>Points ordered from most to least interesting.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cinefractal.PathGenerationCriterion.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cinefractal.PathGenerationCriterion.__repr__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Christoph Lürig.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,633 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; cinefractal  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="cinefractal" href="apidocs/cinefractal/cinefractal.html" />
+    <link rel="prev" title="Getting started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            cinefractal
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#iteration-field-interface">Iteration Field Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#colorization">Colorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#animation">Animation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#focal-system">Focal System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apidocs/cinefractal/cinefractal.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cinefractal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/overview.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
+<p>The overall system consists mainly of three modules:</p>
+<ol class="arabic simple">
+<li><p>The <a class="reference internal" href="#iter">iteration field interface</a>, which generates the iteration field or a color field based on various parameters.</p></li>
+<li><p>The <a class="reference internal" href="#animation">animation system</a> is a keyframe-based animation system that can manipulate the parameters of the iteration field interface over time.</p></li>
+<li><p>The <a class="reference internal" href="#focus">focal system</a>, which provides information on interesting points of an iteration field. These points may, as a result, be used to steer the animation system.</p></li>
+</ol>
+<p>A sketch of the system’s structure can be found in the <a class="reference internal" href="#summary">summary</a> section.</p>
+<section id="iteration-field-interface">
+<span id="iter"></span><h2>Iteration Field Interface<a class="headerlink" href="#iteration-field-interface" title="Link to this heading"></a></h2>
+<p>The iteration field interface provides functionality to generate the following escape time fractals:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>fractal name</p></th>
+<th class="head"><p>image</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot</a></p></td>
+<td><p><img alt="Mandelbrot" src="_images/mandelbrot_inferno.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Julia_set">Julia</a> (combined with seeding value)</p></td>
+<td><p><img alt="Julia" src="_images/inferno.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Burning_Ship_fractal">Burning Ship</a></p></td>
+<td><p><img alt="Burning Ship" src="_images/burning_ship.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tricorn_(mathematics)">Tricorn</a></p></td>
+<td><p><img alt="Tricorn" src="_images/tricorn.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://fractal.fandom.com/wiki/Celtic">Celtic</a></p></td>
+<td><p><img alt="Celtic" src="_images/celtic.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<p>All of them can be combined with an exponent that is used in the iteration expression on complex numbers and should always be &gt;=2.
+The most prominent of the five fractals are the Mandelbrot and Julia sets.</p>
+<p>In total, the synthesized iteration field for the escape time is determined by the following parameters set with the
+corresponding methods in <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.IterationFieldInterface" title="cinefractal.IterationFieldInterface"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code></span></a>. All of them have a default value if not explicitly set.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Setting Method</p></th>
+<th class="head"><p>Default Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Image Size in Rows, Columns</p></td>
+<td><p>set_numpy_extension</p></td>
+<td><p>1024x768</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fractal Type</p></td>
+<td><p>set_fractal_type</p></td>
+<td><p>Mandelbrot</p></td>
+</tr>
+<tr class="row-even"><td><p>Exponent used in iteration scheme</p></td>
+<td><p>set_fractal_exponent</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Seed Value for Julia set</p></td>
+<td><p>set_fractal_seed_value</p></td>
+<td><p>0, 0</p></td>
+</tr>
+<tr class="row-even"><td><p>Maximum iterations probed</p></td>
+<td><p>set_maximum_iterations</p></td>
+<td><p>1000</p></td>
+</tr>
+<tr class="row-odd"><td><p>The extension in complex numbers which are shown in the window</p></td>
+<td><p>set_extension</p></td>
+<td><p>1.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Screen center point in complex number pane</p></td>
+<td><p>set_center_point</p></td>
+<td><p>0, 0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Querying the result can be done by three methods:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.IterationFieldInterface.get_discrete_iteration_field" title="cinefractal.IterationFieldInterface.get_discrete_iteration_field"><span class="xref myst py py-meth"><code class="docutils literal notranslate"><span class="pre">get_discrete_iteration_field</span></code></span></a>: gets a two-dimensional numpy array of int indicating the number of iterations till escape.</p></li>
+<li><p><a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.IterationFieldInterface.get_continuous_iteration_field" title="cinefractal.IterationFieldInterface.get_continuous_iteration_field"><span class="xref myst py py-meth"><code class="docutils literal notranslate"><span class="pre">get_continuous_iteration_field</span></code></span></a>: gets a two-dimensional numpy array of floats, which is a smoothed version of the iteration field.</p></li>
+<li><p><a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.IterationFieldInterface.get_color_field" title="cinefractal.IterationFieldInterface.get_color_field"><span class="xref myst py py-meth"><code class="docutils literal notranslate"><span class="pre">get_color_field</span></code></span></a>: gets a three-dimensional numpy array of uint8 containing mapped colors from the iterations field. The color mapping method is explained in the following paragraph.</p></li>
+</ol>
+<p>The ready colorized fields can be displayed and saved with the <code class="docutils literal notranslate"><span class="pre">Image</span></code> class from <code class="docutils literal notranslate"><span class="pre">PIL</span></code>.</p>
+<section id="colorization">
+<h3>Colorization<a class="headerlink" href="#colorization" title="Link to this heading"></a></h3>
+<p>For the colorization, several base options are offered:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>sample image</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>viridis</p></td>
+<td><p><img alt="viridis" src="_images/viridis.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>cyclical(2)</p></td>
+<td><p><img alt="cyclical" src="_images/cyclical.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p>inferno</p></td>
+<td><p><img alt="inferno" src="_images/inferno.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>magma</p></td>
+<td><p><img alt="magma" src="_images/magma.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p>plasma</p></td>
+<td><p><img alt="plasma" src="_images/plasma.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>cool</p></td>
+<td><p><img alt="cool" src="_images/cool.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<p>These are set by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ifi</span> <span class="o">=</span> <span class="n">IterationFieldInterface</span><span class="p">()</span> 
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_information</span><span class="p">(</span><span class="n">ColorSystem</span><span class="o">.</span><span class="n">viridis</span><span class="p">(),</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The last parameter of the command <code class="docutils literal notranslate"><span class="pre">ifi.set_colorization_information(ColorSystem.cool(),</span> <span class="pre">False)</span></code>
+indicates whether we want to work on a <strong>discretized</strong> iteration field (=True) for coloring or a <strong>continuous</strong> iteration field
+(=False) that takes into account the exact iteration result when divergence has been obtained.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>discrete field</p></th>
+<th class="head"><p>continuous field</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="viridis discrete" src="_images/mandelbrot_discrete.png" /></p></td>
+<td><p><img alt="viridis" src="_images/mandelbrot_continuous.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<p>The next and last relevant parameter for visualization is the logarithmic strength. This parameter increases the resolution of low iteration values.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ifi</span> <span class="o">=</span> <span class="n">IterationFieldInterface</span><span class="p">()</span> 
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_information</span><span class="p">(</span><span class="n">ColorSystem</span><span class="o">.</span><span class="n">viridis</span><span class="p">(),</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_log_strength</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These are shown in the following examples.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>log strength = 0.0</p></th>
+<th class="head"><p>log strength = 2.0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="viridis low" src="_images/mandelbrot_no_strength.png" /></p></td>
+<td><p><img alt="viridis_high" src="_images/mandelbrot_high_strength.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
+<p>An example to generate the typical Mandelbrot image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cinefractal</span><span class="w"> </span><span class="kn">import</span> <span class="n">IterationFieldInterface</span><span class="p">,</span> <span class="n">ColorSystem</span>
+
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1280</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">IMAGE_NAME</span> <span class="o">=</span> <span class="s2">&quot;mandelbrot.png&quot;</span>
+
+<span class="n">ifi</span> <span class="o">=</span> <span class="n">IterationFieldInterface</span><span class="p">()</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_numpy_extension</span><span class="p">(</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_maximum_iterations</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_center_point</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_extension</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_information</span><span class="p">(</span><span class="n">ColorSystem</span><span class="o">.</span><span class="n">cyclical</span><span class="p">(</span><span class="mf">3.0</span><span class="p">),</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_log_strength</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Computing mandelbrot fractal...&quot;</span><span class="p">)</span>
+<span class="n">color_field</span> <span class="o">=</span> <span class="n">ifi</span><span class="o">.</span><span class="n">get_color_field</span><span class="p">()</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">color_field</span><span class="p">)</span>
+<span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">IMAGE_NAME</span><span class="p">)</span>
+<span class="n">image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File saved at </span><span class="si">{</span><span class="n">IMAGE_NAME</span><span class="si">}</span><span class="s2"> with resolution </span><span class="si">{</span><span class="n">WIDTH</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">HEIGHT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="animation">
+<span id="id1"></span><h2>Animation<a class="headerlink" href="#animation" title="Link to this heading"></a></h2>
+<p>The animation system is a keyframe-based system designed to steer the <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.IterationFieldInterface" title="cinefractal.IterationFieldInterface"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code></span></a>.
+In combination with the package <code class="docutils literal notranslate"><span class="pre">MoviePy</span></code>, MP4 videos can be easily constructed.</p>
+<p>The animation system consists of two main classes:</p>
+<ol class="arabic simple">
+<li><p>The <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.AnimationRecorder" title="cinefractal.AnimationRecorder"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">AnimationRecorder</span></code></span></a>: This class takes the key frame information of what should happen when in the movie. The animation recorder can generate an AnimationPlayer.</p></li>
+<li><p>The <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.AnimationPlayer" title="cinefractal.AnimationPlayer"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">AnimationPlayer</span></code></span></a>: The animation player can simply be asked for the length of the clip and can be asked to manifest its data to the <code class="docutils literal notranslate"><span class="pre">IterationInterfaceField</span></code> for a certain time. Animation can not be changed anymore in the animation player.</p></li>
+</ol>
+<p>The parameters and defaults of the <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.AnimationRecorder" title="cinefractal.AnimationRecorder"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">AnimationRecorder</span></code></span></a> are comparable with those of the  <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.IterationFieldInterface" title="cinefractal.IterationFieldInterface"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code></span></a>.
+The main difference is that timings are specified for the keyframe positions.</p>
+<p>Parameters and setting methods are specified in the following table:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Setting Method</p></th>
+<th class="head"><p>Default Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exponent used in iteration scheme</p></td>
+<td><p>set_keyframe_exponent</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Seed Value for Julia set</p></td>
+<td><p>set_keyframe_fractal_seed_value</p></td>
+<td><p>0, 0</p></td>
+</tr>
+<tr class="row-even"><td><p>Maximum iterations probed</p></td>
+<td><p>set_keyframe_max_iterations</p></td>
+<td><p>1000</p></td>
+</tr>
+<tr class="row-odd"><td><p>The extension in complex numbers which are shown in the window</p></td>
+<td><p>set_keyframe_extension</p></td>
+<td><p>1.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Screen center point in complex number pane</p></td>
+<td><p>set_keyframe_render_center_point</p></td>
+<td><p>0, 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>The log strength for coloring fractals</p></td>
+<td><p>set_keyframe_log_strength</p></td>
+<td><p>0.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Most of the values can also be specified by the <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.AnimationRecorder.__new__" title="cinefractal.AnimationRecorder.__new__"><span class="xref myst py py-meth">constructor</span></a> of the
+animation recorder.</p>
+<p>The procedure of using that system is to set up an <code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code> first. Then specify your animation with the
+<a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.AnimationRecorder" title="cinefractal.AnimationRecorder"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">AnimationRecorder</span></code></span></a>. Once it is done, use the <code class="docutils literal notranslate"><span class="pre">get_animation_player</span></code> method to obtain an <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.AnimationPlayer" title="cinefractal.AnimationPlayer"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">AnimationPlayer</span></code></span></a>.
+Now set up a MoviePy movie and use the combination of <code class="docutils literal notranslate"><span class="pre">apply_animation</span></code> to the <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.IterationFieldInterface" title="cinefractal.IterationFieldInterface"><span class="xref myst py py-class"><code class="docutils literal notranslate"><span class="pre">IterationFieldInterface</span></code></span></a>
+and <code class="docutils literal notranslate"><span class="pre">get_color_field</span></code> to ask for a numpy array that can be recorded with MoviePy.</p>
+<section id="id2">
+<h3>Example<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>Render an animated Julia zoom to an MP4 file using moviepy.</p>
+<p>A Julia set with a fixed start value (-0.8, 0.156) animated in three segments:
+zoom in (radius 1.5 -&gt; 1e-4), zoom back out (-&gt; 0.1), then pan to the right
+while holding the radius. Demonstrates several animation tracks (radius and
+center point) with hold key frames.</p>
+<p>The animation system mutates the IterationFieldInterface each frame; we then ask
+the interface for its color field, which is already a (rows, cols, 3) uint8
+array – exactly the frame format moviepy expects.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">moviepy</span><span class="w"> </span><span class="kn">import</span> <span class="n">VideoClip</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">cinefractal</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AnimationRecorder</span><span class="p">,</span>
+    <span class="n">ColorSystem</span><span class="p">,</span>
+    <span class="n">FractalType</span><span class="p">,</span>
+    <span class="n">IterationFieldInterface</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1280</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">720</span>
+<span class="n">FPS</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">SEGMENT</span> <span class="o">=</span> <span class="mf">6.0</span>  <span class="c1"># seconds per animation segment; total duration is 3 * SEGMENT</span>
+
+<span class="c1"># --- Build the animation ---------------------------------------------------</span>
+<span class="c1"># The constructor seeds time 0. Defaults mirror IterationFieldInterface, so we</span>
+<span class="c1"># only override what we animate or want different from the start.</span>
+<span class="n">animation</span> <span class="o">=</span> <span class="n">AnimationRecorder</span><span class="p">(</span>
+    <span class="n">exponent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="c1"># log color scaling (mapped via exp_m1 internally), so the fast-escaping</span>
+    <span class="c1"># zoom stays colorful. exp_m1(2.0) ~= 6.4, a moderate strength.</span>
+    <span class="n">log_strength</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+    <span class="n">max_iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Constant Julia start value (set as the seed at t = 0).</span>
+<span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_fractal_seed_value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.156</span><span class="p">)</span>
+<span class="c1"># Segment 1 (0 .. SEGMENT): logarithmic zoom in, extension 1.5 -&gt; 1e-4.</span>
+<span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_extension</span><span class="p">(</span><span class="n">SEGMENT</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">)</span>
+<span class="c1"># Segment 2 (SEGMENT .. 2*SEGMENT): zoom back out to 0.1.</span>
+<span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_extension</span><span class="p">(</span><span class="n">SEGMENT</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="c1"># Hold the center at the origin through both zoom segments.</span>
+<span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_render_center_point</span><span class="p">(</span><span class="n">SEGMENT</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="c1"># Segment 3 (2*SEGMENT .. 3*SEGMENT): pan to the right (extension held at 0.1).</span>
+<span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_render_center_point</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">SEGMENT</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">animation</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">get_animation_player</span><span class="p">()</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">max_time</span><span class="p">()</span>
+
+<span class="c1"># --- Configure the field interface (type / size / colors set once) ---------</span>
+<span class="n">ifi</span> <span class="o">=</span> <span class="n">IterationFieldInterface</span><span class="p">()</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_numpy_extension</span><span class="p">(</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+<span class="c1"># Only the fractal *type* needs to be set here; exponent and seed value are</span>
+<span class="c1"># driven by the animation every frame.</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_fractal_type</span><span class="p">(</span><span class="n">FractalType</span><span class="o">.</span><span class="n">julia</span><span class="p">())</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_information</span><span class="p">(</span><span class="n">ColorSystem</span><span class="o">.</span><span class="n">inferno</span><span class="p">(),</span> <span class="kc">False</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">make_frame</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Render the frame at time `t` (seconds).&quot;&quot;&quot;</span>
+    <span class="n">animation</span><span class="o">.</span><span class="n">apply_animation</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ifi</span><span class="p">)</span>
+    <span class="c1"># (rows, cols, 3) uint8 -- the exact frame layout moviepy wants.</span>
+    <span class="k">return</span> <span class="n">ifi</span><span class="o">.</span><span class="n">get_color_field</span><span class="p">()</span>
+
+
+<span class="n">clip</span> <span class="o">=</span> <span class="n">VideoClip</span><span class="p">(</span><span class="n">make_frame</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="n">duration</span><span class="p">)</span>
+
+<span class="n">output_path</span> <span class="o">=</span> <span class="s2">&quot;julia_zoom.mp4&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rendering </span><span class="si">{</span><span class="n">duration</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s at </span><span class="si">{</span><span class="n">WIDTH</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">HEIGHT</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">FPS</span><span class="si">}</span><span class="s2"> fps -&gt; </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">clip</span><span class="o">.</span><span class="n">write_videofile</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="n">FPS</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Done: </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="focal-system">
+<span id="focus"></span><h2>Focal System<a class="headerlink" href="#focal-system" title="Link to this heading"></a></h2>
+<p>The focal system searches for interesting points in a fractal escape-iteration field based on local variance.
+Its structure is a two-tiered system roughly comparable to the <a class="reference internal" href="#animation">animation system</a>.</p>
+<p>The focal system consists of two main classes:</p>
+<ol class="arabic simple">
+<li><p>The <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalSystemInterface" title="cinefractal.FocalSystemInterface"><span class="xref myst py py-class">FocalSystemInterface</span></a>: This system can be parametrized for which focal points to look. For the system to work correctly, the parametrization must be consistent with the <a class="reference internal" href="#animation">animation system</a> and the <a class="reference internal" href="#iter">iteration interface</a>. After parametrization is done, a <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalPointResult" title="cinefractal.FocalPointResult"><span class="xref myst py py-class">FocalPointResult</span></a> can be obtained to query focal points.</p></li>
+<li><p>The <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalPointResult" title="cinefractal.FocalPointResult"><span class="xref myst py py-class">FocalPointResult</span></a>: This class represents a collection of the focal points asked for. They can be sorted by various criteria and returned in several formats.</p></li>
+</ol>
+<p>The parametrization methods for the <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalSystemInterface" title="cinefractal.FocalSystemInterface"><span class="xref myst py py-class">FocalSystemInterface</span></a> are as follows.
+It is the user’s responsibility to keep this consistent with the parameters set <a class="reference internal" href="#animation">animation system</a> and the <a class="reference internal" href="#iter">iteration interface</a> system.
+Special attention has to be paid to the fact that the animation system changes values over time. So it is best to query
+focal points for a defined parameter set at a defined keyframe in the animation. Inconsistent parametrization will not result
+in a runtime error but in a wrong determination of focus points.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Setting Method</p></th>
+<th class="head"><p>Default Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exponent used in iteration scheme</p></td>
+<td><p>set_fractal_exponent</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>The fractal type used to calculate the focal point</p></td>
+<td><p>set_fractal_type</p></td>
+<td><p>Mandelbrot</p></td>
+</tr>
+<tr class="row-even"><td><p>Seed Value for Julia set</p></td>
+<td><p>set_fractal_seed_value</p></td>
+<td><p>0, 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maximum iterations probed</p></td>
+<td><p>set_maximum_iterations</p></td>
+<td><p>1000</p></td>
+</tr>
+<tr class="row-even"><td><p>The extension in complex numbers for the region to search points in</p></td>
+<td><p>set_extension</p></td>
+<td><p>1.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>The minimum distance all searched points have to be away from the search center</p></td>
+<td><p>set_extension_min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>The render extension the points are judged at (smaller = deeper zoom), decoupled from the search extension</p></td>
+<td><p>set_evaluation_extension</p></td>
+<td><p>1.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Screen center point in complex number pane</p></td>
+<td><p>set_center_point</p></td>
+<td><p>0, 0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Most of the values can also be specified by the <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalSystemInterface.__new__" title="cinefractal.FocalSystemInterface.__new__"><span class="xref myst py py-meth">constructor</span></a> of the
+focal system interface.</p>
+<p>Once the <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalSystemInterface" title="cinefractal.FocalSystemInterface"><span class="xref myst py py-class">FocalSystemInterface</span></a> has been constructed, a  <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalPointResult" title="cinefractal.FocalPointResult"><span class="xref myst py py-class">FocalPointResult</span></a> structure can be obtained
+with the method <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalSystemInterface.create_collection_of_points" title="cinefractal.FocalSystemInterface.create_collection_of_points"><span class="xref myst py py-meth">create_collection_of_points</span></a>, which
+requires the number of focal points to obtain. It will pick the best ones based on the variance quality metric.
+The resulting  <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalPointResult" title="cinefractal.FocalPointResult"><span class="xref myst py py-class">FocalPointResult</span></a> has three methods to obtain the focal points in different orders and characteristics
+as a list of tuples. They can either be ordered by evaluation quality or by distance (<a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.PathGenerationCriterion" title="cinefractal.PathGenerationCriterion"><span class="xref myst py py-class">see here</span></a>).
+Here the method <a class="reference internal" href="apidocs/cinefractal/cinefractal.html#cinefractal.FocalPointResult.get_path_from_start_point_with_distance" title="cinefractal.FocalPointResult.get_path_from_start_point_with_distance"><span class="xref myst py py-meth">get_path_from_start_point_with_distance</span></a> is the most
+interesting because the distance information can be used for timing purposes, as shown in the example below.
+In methods that receive an explicit starting point, that point is included in the returned path. The path elements
+can then be used to generate key frames for the animation system.</p>
+<section id="id3">
+<h3>Example<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>Autofocus + animated Julia tour rendered to an MP4 with moviepy.</p>
+<p>This combines the autofocus logic of the native <code class="docutils literal notranslate"><span class="pre">fractal_viz</span></code> demo with the
+movie-rendering structure of <code class="docutils literal notranslate"><span class="pre">julia_zoom_movie.py</span></code>:</p>
+<ol class="arabic simple">
+<li><p>The focal system scatters candidates in a coarse search region and keeps
+the most interesting ones (highest local variance), judged at a deep
+evaluation scale.</p></li>
+<li><p>Those kept points are ordered into a short tour, annotated with the
+cumulative travel distance.</p></li>
+<li><p>That distance drives the timing of an AnimationRecorder: the camera pans to
+each point (at constant speed), then zooms in to detail scale and back out
+before traveling on.</p></li>
+<li><p>moviepy renders the resulting AnimationPlayer frame by frame.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">moviepy</span><span class="w"> </span><span class="kn">import</span> <span class="n">VideoClip</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">cinefractal</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AnimationRecorder</span><span class="p">,</span>
+    <span class="n">ColorSystem</span><span class="p">,</span>
+    <span class="n">FocalSystemInterface</span><span class="p">,</span>
+    <span class="n">FractalType</span><span class="p">,</span>
+    <span class="n">IterationFieldInterface</span><span class="p">,</span>
+    <span class="n">PathGenerationCriterion</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># --- Render settings -------------------------------------------------------</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1280</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">720</span>
+<span class="n">FPS</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="c1"># --- Fractal / autofocus settings (mirrors the fractal_viz demo) -----------</span>
+<span class="n">JULIA_SEED</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.156</span><span class="p">)</span>
+<span class="n">MAX_ITERATIONS</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="n">COARSE_SCALE</span> <span class="o">=</span> <span class="mf">1.5</span>          <span class="c1"># extension we hover at between zooms</span>
+<span class="n">COARSE_SEARCH_SCALE</span> <span class="o">=</span> <span class="mf">2.0</span>   <span class="c1"># radius we scatter search candidates in</span>
+<span class="n">DETAIL_SCALE</span> <span class="o">=</span> <span class="mf">1e-4</span>         <span class="c1"># extension we dive to at each point (smaller = deeper zoom)</span>
+
+<span class="n">NUM_FOCAL_POINTS</span> <span class="o">=</span> <span class="mi">5</span>       <span class="c1"># how many interesting points to keep / visit</span>
+<span class="n">START_POINT</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>   <span class="c1"># where the camera tour starts</span>
+
+<span class="c1"># --- Timing ----------------------------------------------------------------</span>
+<span class="n">TRAVERSAL_SECONDS</span> <span class="o">=</span> <span class="mf">4.0</span>     <span class="c1"># total time spent panning across the whole tour</span>
+<span class="n">ZOOM_TIME</span> <span class="o">=</span> <span class="mf">4.0</span>             <span class="c1"># seconds per zoom phase (in and out separately)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_animation</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run the autofocus search and turn the resulting tour into a player.&quot;&quot;&quot;</span>
+    <span class="n">animation</span> <span class="o">=</span> <span class="n">AnimationRecorder</span><span class="p">(</span>
+        <span class="n">exponent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">log_strength</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+        <span class="n">max_iterations</span><span class="o">=</span><span class="n">MAX_ITERATIONS</span><span class="p">,</span>
+        <span class="n">extension</span><span class="o">=</span><span class="n">COARSE_SCALE</span><span class="p">,</span>
+        <span class="n">julia_start_real</span><span class="o">=</span><span class="n">JULIA_SEED</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">julia_start_imag</span><span class="o">=</span><span class="n">JULIA_SEED</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Configure and run the focal search.</span>
+    <span class="n">focal</span> <span class="o">=</span> <span class="n">FocalSystemInterface</span><span class="p">(</span><span class="n">max_iterations</span><span class="o">=</span><span class="n">MAX_ITERATIONS</span><span class="p">)</span>
+    <span class="n">focal</span><span class="o">.</span><span class="n">set_fractal_type</span><span class="p">(</span><span class="n">FractalType</span><span class="o">.</span><span class="n">julia</span><span class="p">())</span>
+    <span class="n">focal</span><span class="o">.</span><span class="n">set_fractal_seed_value</span><span class="p">(</span><span class="o">*</span><span class="n">JULIA_SEED</span><span class="p">)</span>
+    <span class="n">focal</span><span class="o">.</span><span class="n">set_extension</span><span class="p">(</span><span class="n">COARSE_SEARCH_SCALE</span><span class="p">)</span>
+    <span class="c1"># Judge each candidate at the depth we actually dive to, decoupled from the</span>
+    <span class="c1"># search radius.</span>
+    <span class="n">focal</span><span class="o">.</span><span class="n">set_evaluation_extension</span><span class="p">(</span><span class="n">DETAIL_SCALE</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">focal</span><span class="o">.</span><span class="n">create_collection_of_points</span><span class="p">(</span><span class="n">NUM_FOCAL_POINTS</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_path_from_start_point_with_distance</span><span class="p">(</span>
+        <span class="n">PathGenerationCriterion</span><span class="o">.</span><span class="n">short_path</span><span class="p">(),</span> <span class="o">*</span><span class="n">START_POINT</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Scale travel distance to wall-clock time so the pan runs at constant speed.</span>
+    <span class="n">end_dist</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">time_scale</span> <span class="o">=</span> <span class="n">TRAVERSAL_SECONDS</span> <span class="o">/</span> <span class="n">end_dist</span> <span class="k">if</span> <span class="n">end_dist</span> <span class="o">&gt;</span> <span class="mf">0.0</span> <span class="k">else</span> <span class="mf">0.0</span>
+
+    <span class="n">time_passed</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">real</span><span class="p">,</span> <span class="n">imag</span><span class="p">,</span> <span class="n">dist</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
+        <span class="n">time_passed</span> <span class="o">+=</span> <span class="n">dist</span> <span class="o">*</span> <span class="n">time_scale</span>
+        <span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_render_center_point</span><span class="p">(</span><span class="n">time_passed</span><span class="p">,</span> <span class="n">real</span><span class="p">,</span> <span class="n">imag</span><span class="p">)</span>
+
+        <span class="c1"># The start point only seeds the pan; don&#39;t zoom there.</span>
+        <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># Hold the coarse scale on arrival, dive to detail, then come back out.</span>
+        <span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_extension</span><span class="p">(</span><span class="n">time_passed</span><span class="p">,</span> <span class="n">COARSE_SCALE</span><span class="p">)</span>
+        <span class="n">time_passed</span> <span class="o">+=</span> <span class="n">ZOOM_TIME</span>
+        <span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_extension</span><span class="p">(</span><span class="n">time_passed</span><span class="p">,</span> <span class="n">DETAIL_SCALE</span><span class="p">)</span>
+        <span class="n">time_passed</span> <span class="o">+=</span> <span class="n">ZOOM_TIME</span>
+        <span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_extension</span><span class="p">(</span><span class="n">time_passed</span><span class="p">,</span> <span class="n">COARSE_SCALE</span><span class="p">)</span>
+        <span class="c1"># Re-pin the center so we don&#39;t drift off target while zooming.</span>
+        <span class="n">animation</span><span class="o">.</span><span class="n">set_keyframe_render_center_point</span><span class="p">(</span><span class="n">time_passed</span><span class="p">,</span> <span class="n">real</span><span class="p">,</span> <span class="n">imag</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">animation</span><span class="o">.</span><span class="n">get_animation_player</span><span class="p">()</span>
+
+
+<span class="c1"># --- Build animation and configure the field interface ---------------------</span>
+<span class="n">animation</span> <span class="o">=</span> <span class="n">build_animation</span><span class="p">()</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">max_time</span><span class="p">()</span>
+
+<span class="n">ifi</span> <span class="o">=</span> <span class="n">IterationFieldInterface</span><span class="p">()</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_numpy_extension</span><span class="p">(</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+<span class="c1"># Only the type is set here; exponent and seed are driven by the animation.</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_fractal_type</span><span class="p">(</span><span class="n">FractalType</span><span class="o">.</span><span class="n">julia</span><span class="p">())</span>
+<span class="n">ifi</span><span class="o">.</span><span class="n">set_colorization_information</span><span class="p">(</span><span class="n">ColorSystem</span><span class="o">.</span><span class="n">inferno</span><span class="p">(),</span> <span class="kc">False</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">make_frame</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Render the frame at time `t` (seconds).&quot;&quot;&quot;</span>
+    <span class="n">animation</span><span class="o">.</span><span class="n">apply_animation</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ifi</span><span class="p">)</span>
+    <span class="c1"># (rows, cols, 3) uint8 -- the exact frame layout moviepy wants.</span>
+    <span class="k">return</span> <span class="n">ifi</span><span class="o">.</span><span class="n">get_color_field</span><span class="p">()</span>
+
+
+<span class="n">clip</span> <span class="o">=</span> <span class="n">VideoClip</span><span class="p">(</span><span class="n">make_frame</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="n">duration</span><span class="p">)</span>
+
+<span class="n">output_path</span> <span class="o">=</span> <span class="s2">&quot;julia_autofocus.mp4&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rendering </span><span class="si">{</span><span class="n">duration</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s at </span><span class="si">{</span><span class="n">WIDTH</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">HEIGHT</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">FPS</span><span class="si">}</span><span class="s2"> fps -&gt; </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">clip</span><span class="o">.</span><span class="n">write_videofile</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="n">FPS</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Done: </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="summary">
+<span id="id4"></span><h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>The overall data flow of the system from <a class="reference internal" href="#focus">Focal System</a> over the <a class="reference internal" href="#animation">Animation System</a> down to
+the <a class="reference internal" href="#iter">Iteration Field Interface</a> can be summarized in the following picture:</p>
+<p><img alt="Dataflow summary" src="_images/Flow.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apidocs/cinefractal/cinefractal.html" class="btn btn-neutral float-right" title="cinefractal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Christoph Lürig.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
