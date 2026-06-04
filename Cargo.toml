@@ -1,0 +1,12 @@
+[workspace]
+resolver = "3"
+members = ["fractal_core", "fractal_viz", "cinefractal"]
+
+[workspace.dependencies]
+ndarray = "0.17"
+
+
+[profile.profiling]
+inherits = "release"
+debug = true
+strip = "none"

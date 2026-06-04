@@ -1,0 +1,9 @@
+[package]
+name = "fractal_viz"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+fractal_core = {path = "../fractal_core"}
+ndarray = { workspace = true}
+macroquad = "0.4.15"

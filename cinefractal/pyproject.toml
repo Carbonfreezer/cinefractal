@@ -1,0 +1,19 @@
+[build-system]
+requires = ["maturin>=1.13,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "cinefractal"
+dynamic = ["version", "description", "authors"]
+license = "MIT"
+requires-python = ">=3.8"
+# Hard runtime dependency: the public API returns numpy arrays
+# (e.g. IterationFieldInterface.get_color_field).
+dependencies = [
+    "numpy>=1.21",
+]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]

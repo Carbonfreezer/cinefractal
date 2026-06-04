@@ -1,0 +1,24 @@
+[package]
+name = "cinefractal"
+version = "0.1.0"
+edition = "2024"
+authors = ['Christoph Lürig <christoph.luerig@gmail.com>']
+homepage = "https://github.com/Carbonfreezer/cinefractal"
+description = "This module provides functionality to generate images and movies from fractals. It has three main building blocks. One for generating fractal images, one for animation and one for finding interesting focus points."
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "cinefractal"
+# "rlib" is required so the `stub_gen` binary (src/bin/stub_gen.rs) can link
+# against this crate; maturin still uses the "cdylib" for the wheel.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.28.3" , features = ["experimental-inspect"]}
+fractal_core = {path = "../fractal_core"}
+ndarray = {workspace = true}
+numpy = "0.28.0"
+# Generates the .pyi stub (incl. docstrings) from the Rust sources.
+# Default features include `numpy`, so PyArray return types are typed correctly.
+pyo3-stub-gen = "0.22"
