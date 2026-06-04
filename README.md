@@ -10,6 +10,8 @@ and [maturin](https://www.maturin.rs/)) and parallelised with
 [rayon](https://github.com/rayon-rs/rayon), while the public API is plain Python
 that returns NumPy arrays ready to hand off to Pillow or MoviePy.
 
+The complete documentation can be found on [github pages](https://carbonfreezer.github.io/cinefractal/index.html).
+
 The library has three main building blocks:
 
 1. **Iteration field interface** — generates an iteration field or a colorized
