@@ -58,7 +58,7 @@ pyo3_stub_gen::module_doc!(
     "This module provides functionality to generate images and movies from \
      fractals. It has three main building blocks. One for generating fractal \
      images, one for animation and one for finding interesting focus points. \
-     For details see https://github.com/Carbonfreezer/fractal_python."
+     For details see https://github.com/Carbonfreezer/cinefractal."
 );
 
 // Gathers the stub information registered by the `#[gen_stub_*]` macros and

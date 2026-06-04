@@ -5,6 +5,7 @@ build-backend = "maturin"
 [project]
 name = "cinefractal"
 dynamic = ["version", "description", "authors"]
+readme = "../README.md"
 license = "MIT"
 requires-python = ">=3.8"
 # Hard runtime dependency: the public API returns numpy arrays
@@ -17,3 +18,6 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
+[project.urls]
+Documentation = "https://carbonfreezer.github.io/cinefractal/index.html"
+Repository = "https://github.com/Carbonfreezer/cinefractal.git"
