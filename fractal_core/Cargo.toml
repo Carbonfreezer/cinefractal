@@ -5,6 +5,7 @@ edition = "2024"
 license = "MIT"
 authors = ['Christoph Lürig <christoph.luerig@gmail.com>']
 homepage = "https://github.com/Carbonfreezer/cinefractal"
+description = "This is a pure Rust library for the fractal generation, that gets encapsulated by the cinefractal library."
 
 [dependencies]
 rayon = "1.12.0"
