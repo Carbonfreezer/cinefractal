@@ -2,6 +2,9 @@
 name = "fractal_core"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+authors = ['Christoph Lürig <christoph.luerig@gmail.com>']
+homepage = "https://github.com/Carbonfreezer/cinefractal"
 
 [dependencies]
 rayon = "1.12.0"
