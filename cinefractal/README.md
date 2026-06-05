@@ -136,7 +136,7 @@ frame = ifi.get_color_field()           # render that frame
 Key frames exist for the exponent, Julia seed, render center point, extension
 (zoom, interpolated in logarithmic space), maximum iterations, and color log
 strength. Combined with MoviePy's `VideoClip`, this renders straight to MP4 —
-see [`julia_zoom_movie.py`](cinefractal/python/julia_zoom_movie.py).
+see [`julia_zoom_movie.py`](https://github.com/Carbonfreezer/cinefractal/tree/main/cinefractal/python/julia_zoom_movie.py).
 
 ### Focal (autofocus) system
 
@@ -165,11 +165,11 @@ Note that the **search extension** (where candidates are scattered) is decoupled
 from the **evaluation extension** (the extension you will actually render at;
 smaller = deeper zoom). The cumulative distance returned by
 `get_path_from_start_point_with_distance` is handy for timing a constant-speed
-camera travel — see [`julia_autofocus_movie.py`](cinefractal/python/julia_autofocus_movie.py).
+camera travel — see [`julia_autofocus_movie.py`](https://github.com/Carbonfreezer/cinefractal/tree/main/cinefractal/python/julia_autofocus_movie.py).
 
 ## Examples
 
-All examples live in [`cinefractal/python/`](cinefractal/python/):
+All examples live in [`cinefractal/python/`](https://github.com/Carbonfreezer/cinefractal/tree/main/cinefractal/python/):
 
 - **`iterationfield.py`** — query a raw iteration field and visualize it with plotly.
 - **`mandelbrot.py`** — render a Mandelbrot image and save it to a file.
