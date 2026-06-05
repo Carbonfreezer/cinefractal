@@ -23,5 +23,4 @@ numpy = "0.28.0"
 # Generates the .pyi stub (incl. docstrings) from the Rust sources.
 # Default features include `numpy`, so PyArray return types are typed correctly.
 
-# Locally disabled  for CI.
-# pyo3-stub-gen = "0.22"
+pyo3-stub-gen = "0.22"

@@ -7,8 +7,7 @@ use fractal_core::prelude::*;
 use pyo3::exceptions::PyValueError;
 use pyo3::prelude::*;
 
-// Locally disabled  for CI.
-// use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
+use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 
 /// Builder for an animation. Key frames are added in this open state; calling
 /// [`get_animation_player`][AnimationRecorder.get_animation_player] freezes
@@ -35,15 +34,13 @@ use pyo3::prelude::*;
 /// animation.apply_animation(3.0, ifi)
 /// color = ifi.get_color_field()
 /// ```
-// Locally disabled  for CI.
-// #[gen_stub_pyclass]
+#[gen_stub_pyclass]
 #[pyclass(name = "AnimationRecorder")]
 pub struct PyAnimationRecorder {
     inner: AnimationRecorder,
 }
 
-// Locally disabled  for CI.
-// #[gen_stub_pymethods]
+#[gen_stub_pymethods]
 #[pymethods]
 impl PyAnimationRecorder {
     /// Creates a new animation builder seeded at time 0.
@@ -139,15 +136,13 @@ impl PyAnimationRecorder {
 /// Immutable animation produced by `AnimationRecorder.get_animation_player()`.
 /// Applies the animated values at a given time onto an `IterationFieldInterface`;
 /// reading a color field or an iteration field afterwards is up to the caller.
-// Locally disabled  for CI.
-// #[gen_stub_pyclass]
+#[gen_stub_pyclass]
 #[pyclass(name = "AnimationPlayer")]
 pub struct PyAnimationPlayer {
     inner: AnimationPlayer,
 }
 
-// Locally disabled  for CI.
-// #[gen_stub_pymethods]
+#[gen_stub_pymethods]
 #[pymethods]
 impl PyAnimationPlayer {
     /// The end time of the animation: the latest key frame time across all
@@ -165,8 +160,7 @@ impl PyAnimationPlayer {
         // pyo3-stub-gen has no `PyStubType` impl for `&mut`-references, so we
         // tell it the Python type explicitly (same module, no import needed).
         
-        // Locally disabled  for CI.
-        // #[gen_stub(override_type(type_repr = "IterationFieldInterface"))]
+        #[gen_stub(override_type(type_repr = "IterationFieldInterface"))]
         interface: &mut PyIterationFieldInterface,
     ) {
         self.inner.apply_animation(time, &mut interface.inner);

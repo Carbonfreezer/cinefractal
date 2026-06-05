@@ -7,8 +7,7 @@ use numpy::{IntoPyArray, PyArray2, PyArray3};
 use pyo3::exceptions::PyValueError;
 use pyo3::prelude::*;
 
-// Locally disabled  for CI.
-// use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
+use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 
 /// Main interface for computing fractals. This is the entry point for generating images and
 /// iteration fields. A base is setup with default parameters, that can be adjusted by individual methods.
@@ -24,15 +23,13 @@ use pyo3::prelude::*;
 /// ifi.set_colorization_information(ColorSystem.viridis(), True)
 /// color = ifi.get_color_field()   # numpy array (rows, cols, 3), dtype=uint8
 /// ```
-// Locally disabled  for CI.
-// #[gen_stub_pyclass]
+#[gen_stub_pyclass]
 #[pyclass(name = "IterationFieldInterface")]
 pub struct PyIterationFieldInterface {
     pub(crate) inner: IterationFieldInterface,
 }
 
-// Locally disabled  for CI.
-// #[gen_stub_pymethods]
+#[gen_stub_pymethods]
 #[pymethods]
 impl PyIterationFieldInterface {
     /// Creates a new instance with default values:

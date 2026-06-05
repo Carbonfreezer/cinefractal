@@ -25,7 +25,7 @@ The library has three main building blocks:
 
 | Mandelbrot | Julia | Burning Ship | Tricorn | Celtic |
 |:----------:|:-----:|:------------:|:-------:|:------:|
-| ![Mandelbrot](cinefractal/docs/images/mandelbrot_inferno.png) | ![Julia](cinefractal/docs/images/inferno.png) | ![Burning Ship](cinefractal/docs/images/burning_ship.png) | ![Tricorn](cinefractal/docs/images/tricorn.png) | ![Celtic](cinefractal/docs/images/celtic.png) |
+| ![Mandelbrot](docs/images/mandelbrot_inferno.png) | ![Julia](docs/images/inferno.png) | ![Burning Ship](docs/images/burning_ship.png) | ![Tricorn](docs/images/tricorn.png) | ![Celtic](docs/images/celtic.png) |
 
 ## Installation
 
