@@ -7,7 +7,8 @@
 
 use fractal_core::prelude::*;
 use pyo3::prelude::*;
-use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
+// Locally disabled  for CI.
+// use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 
 use crate::py_fractal_type::PyFractalType;
 
@@ -29,14 +30,16 @@ use crate::py_fractal_type::PyFractalType;
 ///
 /// crit = PathGenerationCriterion.short_path()
 /// ```
-#[gen_stub_pyclass]
+// Locally disabled  for CI.
+// #[gen_stub_pyclass]
 #[pyclass(name = "PathGenerationCriterion", from_py_object)]
 #[derive(Clone, Copy)]
 pub struct PyPathGenerationCriterion {
     inner: PathGenerationCriterion,
 }
 
-#[gen_stub_pymethods]
+// Locally disabled  for CI.
+// #[gen_stub_pymethods]
 #[pymethods]
 impl PyPathGenerationCriterion {
     /// Greedy short tour starting from the point nearest the start point.
@@ -90,13 +93,15 @@ impl PyPathGenerationCriterion {
 /// result = focus.create_collection_of_points(50)
 /// points = result.get_focal_points_with_evaluation()   # list of (re, im, score)
 /// ```
-#[gen_stub_pyclass]
+// Locally disabled  for CI.
+// #[gen_stub_pyclass]
 #[pyclass(name = "FocalSystemInterface")]
 pub struct PyFocalSystemInterface {
     inner: FocalSystemInterface,
 }
 
-#[gen_stub_pymethods]
+// Locally disabled  for CI.
+// #[gen_stub_pymethods]
 #[pymethods]
 impl PyFocalSystemInterface {
     /// Creates a new focal-system builder with default parameters:
@@ -213,13 +218,15 @@ impl PyFocalSystemInterface {
 /// `FocalSystemInterface.create_collection_of_points()`. Holds the best focal
 /// points and can hand them back either unordered (with their scores) or as an
 /// ordered path ready to drive an `AnimationRecorder`.
-#[gen_stub_pyclass]
+// Locally disabled  for CI.
+// #[gen_stub_pyclass]
 #[pyclass(name = "FocalPointResult")]
 pub struct PyFocalPointResult {
     inner: FocalPointResult,
 }
 
-#[gen_stub_pymethods]
+// Locally disabled  for CI.
+// #[gen_stub_pymethods]
 #[pymethods]
 impl PyFocalPointResult {
     /// All focal points with their evaluation, unordered.

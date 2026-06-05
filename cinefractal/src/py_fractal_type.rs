@@ -3,7 +3,8 @@
 
 use fractal_core::prelude::*;
 use pyo3::prelude::*;
-use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
+// Locally disabled  for CI.
+// use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 
 /// The kind of fractal to render. A pure tag -- the exponent and the Julia seed
 /// value are set separately on the `IterationFieldInterface` via
@@ -23,14 +24,16 @@ use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 ///
 /// ft = FractalType.julia()
 /// ```
-#[gen_stub_pyclass]
+// Locally disabled  for CI.
+// #[gen_stub_pyclass]
 #[pyclass(name = "FractalType", from_py_object)]
 #[derive(Clone)]
 pub struct PyFractalType {
     pub(crate) inner: FractalType,
 }
 
-#[gen_stub_pymethods]
+// Locally disabled  for CI.
+// #[gen_stub_pymethods]
 #[pymethods]
 impl PyFractalType {
     #[staticmethod]

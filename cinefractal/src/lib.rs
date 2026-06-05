@@ -11,7 +11,8 @@ use py_focal_system::{PyFocalPointResult, PyFocalSystemInterface, PyPathGenerati
 use py_fractal_type::PyFractalType;
 use py_iteration_field_interface::PyIterationFieldInterface;
 use pyo3::prelude::*;
-use pyo3_stub_gen::define_stub_info_gatherer;
+// Locally disabled  for CI.
+// use pyo3_stub_gen::define_stub_info_gatherer;
 
 // Build & stub workflow:
 // 1. Regenerate cinefractal.pyi (incl. docstrings) from the Rust sources:
@@ -49,6 +50,8 @@ mod cinefractal {
     use super::PyIterationFieldInterface;
 }
 
+// Locally disabled  for CI.
+/*
 // The `///` doc comment above `mod cinefractal` only sets the runtime
 // `__doc__`; it is NOT picked up by the stub generator. IDEs read the module
 // docstring from the static `cinefractal.pyi`, so it must be registered
@@ -65,3 +68,4 @@ pyo3_stub_gen::module_doc!(
 // exposes it as `cinefractal::stub_info()`, which `src/bin/stub_gen.rs` calls.
 // The module name is read from pyproject.toml ([project] name = "cinefractal").
 define_stub_info_gatherer!(stub_info);
+*/

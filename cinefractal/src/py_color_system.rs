@@ -3,7 +3,8 @@
 
 use fractal_core::prelude::*;
 use pyo3::prelude::*;
-use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
+// Locally disabled  for CI.
+// use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 
 /// Color scheme used to render the fractal. Supports different base colors.
 ///
@@ -20,14 +21,16 @@ use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 /// cs = ColorSystem.viridis()
 /// cs = ColorSystem.cyclical(repetition_factor=3.0)
 /// ```
-#[gen_stub_pyclass]
+// Locally disabled  for CI.
+// #[gen_stub_pyclass]
 #[pyclass(name = "ColorSystem", from_py_object)]
 #[derive(Clone)]
 pub struct PyColorSystem {
     pub(crate) inner: ColorSystem,
 }
 
-#[gen_stub_pymethods]
+// Locally disabled  for CI.
+// #[gen_stub_pymethods]
 #[pymethods]
 impl PyColorSystem {
     #[staticmethod]

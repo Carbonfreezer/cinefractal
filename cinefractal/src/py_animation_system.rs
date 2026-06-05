@@ -6,7 +6,9 @@ use crate::py_iteration_field_interface::PyIterationFieldInterface;
 use fractal_core::prelude::*;
 use pyo3::exceptions::PyValueError;
 use pyo3::prelude::*;
-use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
+
+// Locally disabled  for CI.
+// use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 
 /// Builder for an animation. Key frames are added in this open state; calling
 /// [`get_animation_player`][AnimationRecorder.get_animation_player] freezes
@@ -33,13 +35,15 @@ use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pymethods};
 /// animation.apply_animation(3.0, ifi)
 /// color = ifi.get_color_field()
 /// ```
-#[gen_stub_pyclass]
+// Locally disabled  for CI.
+// #[gen_stub_pyclass]
 #[pyclass(name = "AnimationRecorder")]
 pub struct PyAnimationRecorder {
     inner: AnimationRecorder,
 }
 
-#[gen_stub_pymethods]
+// Locally disabled  for CI.
+// #[gen_stub_pymethods]
 #[pymethods]
 impl PyAnimationRecorder {
     /// Creates a new animation builder seeded at time 0.
@@ -135,13 +139,15 @@ impl PyAnimationRecorder {
 /// Immutable animation produced by `AnimationRecorder.get_animation_player()`.
 /// Applies the animated values at a given time onto an `IterationFieldInterface`;
 /// reading a color field or an iteration field afterwards is up to the caller.
-#[gen_stub_pyclass]
+// Locally disabled  for CI.
+// #[gen_stub_pyclass]
 #[pyclass(name = "AnimationPlayer")]
 pub struct PyAnimationPlayer {
     inner: AnimationPlayer,
 }
 
-#[gen_stub_pymethods]
+// Locally disabled  for CI.
+// #[gen_stub_pymethods]
 #[pymethods]
 impl PyAnimationPlayer {
     /// The end time of the animation: the latest key frame time across all
@@ -158,7 +164,9 @@ impl PyAnimationPlayer {
         time: f32,
         // pyo3-stub-gen has no `PyStubType` impl for `&mut`-references, so we
         // tell it the Python type explicitly (same module, no import needed).
-        #[gen_stub(override_type(type_repr = "IterationFieldInterface"))]
+        
+        // Locally disabled  for CI.
+        // #[gen_stub(override_type(type_repr = "IterationFieldInterface"))]
         interface: &mut PyIterationFieldInterface,
     ) {
         self.inner.apply_animation(time, &mut interface.inner);
