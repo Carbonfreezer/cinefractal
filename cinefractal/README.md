@@ -23,9 +23,9 @@ The library has three main building blocks:
 
 ## Gallery
 
-| Mandelbrot | Julia | Burning Ship | Tricorn | Celtic |
-|:----------:|:-----:|:------------:|:-------:|:------:|
-| ![Mandelbrot](docs/images/mandelbrot_inferno.png) | ![Julia](docs/images/inferno.png) | ![Burning Ship](docs/images/burning_ship.png) | ![Tricorn](docs/images/tricorn.png) | ![Celtic](docs/images/celtic.png) |
+|                                                           Mandelbrot                                                           | Julia | Burning Ship | Tricorn | Celtic |
+|:------------------------------------------------------------------------------------------------------------------------------:|:-----:|:------------:|:-------:|:------:|
+| ![Mandelbrot](https://raw.githubusercontent.com/Carbonfreezer/cinefractal/main/cinefractal/docs/images/mandelbrot_inferno.png) | ![Julia](https://raw.githubusercontent.com/Carbonfreezer/cinefractal/main/cinefractal/docs/images/inferno.png) | ![Burning Ship](https://raw.githubusercontent.com/Carbonfreezer/cinefractal/main/cinefractal/docs/images/burning_ship.png) | ![Tricorn](https://raw.githubusercontent.com/Carbonfreezer/cinefractal/main/cinefractal/docs/images/tricorn.png) | ![Celtic](https://raw.githubusercontent.com/Carbonfreezer/cinefractal/main/cinefractal/docs/images/celtic.png) |
 
 ## Installation
 
