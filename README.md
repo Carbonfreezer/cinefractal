@@ -1,7 +1,7 @@
 # Cinefractal
 
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Python](https://img.shields.io/badge/python-3.13%2B-blue)
 ![Built with](https://img.shields.io/badge/built%20with-Rust%20%2B%20PyO3-orange)
 
 
