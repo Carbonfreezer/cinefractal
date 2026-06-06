@@ -83,6 +83,7 @@ impl PyAnimationRecorder {
 
     /// Adds a key frame for the iteration exponent. The exponent must be at
     /// least 2. The exponent is the exponent used in the escape time iteration formula.
+    #[pyo3(signature = (time, exponent = 2))]
     pub fn set_keyframe_exponent(&mut self, time: f32, exponent: u32) -> PyResult<()> {
         self.inner
             .set_keyframe_exponent(time, exponent)
@@ -91,12 +92,14 @@ impl PyAnimationRecorder {
 
     /// Adds a key frame for the fractal value. The Julia fractal is the only fractal, that
     /// has a start value as an additional parameter. One has to add real and imaginary parts.
+    #[pyo3(signature = (time, real = 0.0, imag = 0.0))]
     pub fn set_keyframe_fractal_seed_value(&mut self, time: f32, real: f64, imag: f64) {
         self.inner.set_keyframe_fractal_seed_value(time, real, imag);
     }
 
     /// Adds a key frame for the render center point. This is the point in the complex 
     /// number pane, that will be in the center of the image.
+    #[pyo3(signature = (time, real = 0.0, imag = 0.0))]
     pub fn set_keyframe_render_center_point(&mut self, time: f32, real: f64, imag: f64) {
         self.inner
             .set_keyframe_render_center_point(time, real, imag);
@@ -104,6 +107,7 @@ impl PyAnimationRecorder {
 
     /// Adds a key frame for the extension (zoom). Interpolated in logarithmic
     /// space, so the extension must be strictly positive.
+    #[pyo3(signature = (time, extension = 1.5))]
     pub fn set_keyframe_extension(&mut self, time: f32, extension: f64) -> PyResult<()> {
         self.inner
             .set_keyframe_extension(time, extension)
@@ -112,12 +116,14 @@ impl PyAnimationRecorder {
 
     /// Adds a key frame for the maximum number of iterations used in the escape iteration.
     /// Higher values mean more computation time but also more detailed fractal borders.
+    #[pyo3(signature = (time, max_iter = 1000))]
     pub fn set_keyframe_max_iterations(&mut self, time: f32, max_iter: u16) {
         self.inner.set_keyframe_max_iterations(time, max_iter);
     }
 
     /// Adds a key frame for the color log strength. The higher the log strength the more detailed
     /// the regions with low iteration values will be.
+    #[pyo3(signature = (time, log_strength = 0.0))]
     pub fn set_keyframe_log_strength(&mut self, time: f32, log_strength: f32) {
         self.inner.set_keyframe_log_strength(time, log_strength);
     }

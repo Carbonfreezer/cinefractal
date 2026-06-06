@@ -71,32 +71,32 @@ class AnimationRecorder:
         r"""
         Creates a new animation builder seeded at time 0.
         """
-    def set_keyframe_exponent(self, time: builtins.float, exponent: builtins.int) -> None:
+    def set_keyframe_exponent(self, time: builtins.float, exponent: builtins.int = 2) -> None:
         r"""
         Adds a key frame for the iteration exponent. The exponent must be at
         least 2. The exponent is the exponent used in the escape time iteration formula.
         """
-    def set_keyframe_fractal_seed_value(self, time: builtins.float, real: builtins.float, imag: builtins.float) -> None:
+    def set_keyframe_fractal_seed_value(self, time: builtins.float, real: builtins.float = 0.0, imag: builtins.float = 0.0) -> None:
         r"""
         Adds a key frame for the fractal value. The Julia fractal is the only fractal, that
         has a start value as an additional parameter. One has to add real and imaginary parts.
         """
-    def set_keyframe_render_center_point(self, time: builtins.float, real: builtins.float, imag: builtins.float) -> None:
+    def set_keyframe_render_center_point(self, time: builtins.float, real: builtins.float = 0.0, imag: builtins.float = 0.0) -> None:
         r"""
         Adds a key frame for the render center point. This is the point in the complex 
         number pane, that will be in the center of the image.
         """
-    def set_keyframe_extension(self, time: builtins.float, extension: builtins.float) -> None:
+    def set_keyframe_extension(self, time: builtins.float, extension: builtins.float = 1.5) -> None:
         r"""
         Adds a key frame for the extension (zoom). Interpolated in logarithmic
         space, so the extension must be strictly positive.
         """
-    def set_keyframe_max_iterations(self, time: builtins.float, max_iter: builtins.int) -> None:
+    def set_keyframe_max_iterations(self, time: builtins.float, max_iter: builtins.int = 1000) -> None:
         r"""
         Adds a key frame for the maximum number of iterations used in the escape iteration.
         Higher values mean more computation time but also more detailed fractal borders.
         """
-    def set_keyframe_log_strength(self, time: builtins.float, log_strength: builtins.float) -> None:
+    def set_keyframe_log_strength(self, time: builtins.float, log_strength: builtins.float = 0.0) -> None:
         r"""
         Adds a key frame for the color log strength. The higher the log strength the more detailed
         the regions with low iteration values will be.

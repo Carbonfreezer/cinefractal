@@ -102,37 +102,37 @@ API
       .. autodoc2-docstring:: cinefractal.AnimationRecorder.__new__
          :parser: myst
 
-   .. py:method:: set_keyframe_exponent(time: float, exponent: int) -> None
+   .. py:method:: set_keyframe_exponent(time: float, exponent: int = 2) -> None
       :canonical: cinefractal.AnimationRecorder.set_keyframe_exponent
 
       .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_exponent
          :parser: myst
 
-   .. py:method:: set_keyframe_fractal_seed_value(time: float, real: float, imag: float) -> None
+   .. py:method:: set_keyframe_fractal_seed_value(time: float, real: float = 0.0, imag: float = 0.0) -> None
       :canonical: cinefractal.AnimationRecorder.set_keyframe_fractal_seed_value
 
       .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_fractal_seed_value
          :parser: myst
 
-   .. py:method:: set_keyframe_render_center_point(time: float, real: float, imag: float) -> None
+   .. py:method:: set_keyframe_render_center_point(time: float, real: float = 0.0, imag: float = 0.0) -> None
       :canonical: cinefractal.AnimationRecorder.set_keyframe_render_center_point
 
       .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_render_center_point
          :parser: myst
 
-   .. py:method:: set_keyframe_extension(time: float, extension: float) -> None
+   .. py:method:: set_keyframe_extension(time: float, extension: float = 1.5) -> None
       :canonical: cinefractal.AnimationRecorder.set_keyframe_extension
 
       .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_extension
          :parser: myst
 
-   .. py:method:: set_keyframe_max_iterations(time: float, max_iter: int) -> None
+   .. py:method:: set_keyframe_max_iterations(time: float, max_iter: int = 1000) -> None
       :canonical: cinefractal.AnimationRecorder.set_keyframe_max_iterations
 
       .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_max_iterations
          :parser: myst
 
-   .. py:method:: set_keyframe_log_strength(time: float, log_strength: float) -> None
+   .. py:method:: set_keyframe_log_strength(time: float, log_strength: float = 0.0) -> None
       :canonical: cinefractal.AnimationRecorder.set_keyframe_log_strength
 
       .. autodoc2-docstring:: cinefractal.AnimationRecorder.set_keyframe_log_strength
