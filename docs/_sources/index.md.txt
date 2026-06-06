@@ -1,5 +1,8 @@
 # Cinefractal documentation
 
+![Animation](images/sea_horse.gif)
+
+
 Welcome to Cinefractal, the Python library for static and animated escape fractals written in Rust.
 
 The library consists of mainly three parts:
