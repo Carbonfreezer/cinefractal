@@ -7,7 +7,7 @@ name = "cinefractal"
 dynamic = ["version", "description", "authors"]
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.10"
+requires-python = ">=3.13"
 # Hard runtime dependency: the public API returns numpy arrays
 # (e.g. IterationFieldInterface.get_color_field).
 dependencies = [
