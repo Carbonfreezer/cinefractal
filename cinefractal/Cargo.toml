@@ -1,6 +1,6 @@
 [package]
 name = "cinefractal"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2024"
 license = "MIT"
 authors = ['Christoph Lürig <christoph.luerig@gmail.com>']

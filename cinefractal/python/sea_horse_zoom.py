@@ -11,8 +11,8 @@ WIDTH = 640
 HEIGHT = 480
 FPS = 10
 PANNING = 1.0 # The time we need to pan to the destination
-ZOOMIN = 5.0  # Length for zoomin in.
-ZOOMOUT = 2.5 # Length for zooming out.
+ZOOMIN = 4.0  # Length for zoomin in.
+ZOOMOUT = 1.5 # Length for zooming out.
 FINALPAN = 1.0 # Length for the final panning phase.
 SEAHORSE = (-0.7436, 0.1318) # Position of the seahorse valley.
 
