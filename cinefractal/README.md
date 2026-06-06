@@ -10,6 +10,8 @@ and [maturin](https://www.maturin.rs/)) and parallelised with
 [rayon](https://github.com/rayon-rs/rayon), while the public API is plain Python
 that returns NumPy arrays ready to hand off to Pillow or MoviePy.
 
+![Demo Image](https://raw.githubusercontent.com/Carbonfreezer/cinefractal/main/cinefractal/docs/images/sea_horse.gif)
+
 The complete documentation can be found on [github pages](https://carbonfreezer.github.io/cinefractal/index.html).
 
 The library has three main building blocks:
@@ -175,6 +177,7 @@ All examples live in [`cinefractal/python/`](https://github.com/Carbonfreezer/ci
 - **`mandelbrot.py`** — render a Mandelbrot image and save it to a file.
 - **`julia_zoom_movie.py`** — a pre-scripted Julia zoom/pan rendered to MP4 with MoviePy.
 - **`julia_autofocus_movie.py`** — autofocus picks interesting points and a movie tours them.
+- **`sea_horse_zoom.py`** - generates the animated Gif from above.
 
 ## Building from source
 

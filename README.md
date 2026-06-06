@@ -4,11 +4,15 @@
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Built with](https://img.shields.io/badge/built%20with-Rust%20%2B%20PyO3-orange)
 
+
 **Cinefractal** is a Python library for generating static and animated escape-time
 fractals. The number crunching is written in Rust (via [PyO3](https://pyo3.rs/)
 and [maturin](https://www.maturin.rs/)) and parallelised with
 [rayon](https://github.com/rayon-rs/rayon), while the public API is plain Python
 that returns NumPy arrays ready to hand off to Pillow or MoviePy.
+
+![Demo Image](cinefractal/docs/images/sea_horse.gif)
+
 
 The complete documentation can be found on [github pages](https://carbonfreezer.github.io/cinefractal/index.html).
 
@@ -175,6 +179,7 @@ All examples live in [`cinefractal/python/`](cinefractal/python/):
 - **`mandelbrot.py`** — render a Mandelbrot image and save it to a file.
 - **`julia_zoom_movie.py`** — a pre-scripted Julia zoom/pan rendered to MP4 with MoviePy.
 - **`julia_autofocus_movie.py`** — autofocus picks interesting points and a movie tours them.
+- **`sea_horse_zoom.py`** - generates the animated Gif from above.
 
 ## Building from source
 
