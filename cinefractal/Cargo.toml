@@ -1,12 +1,12 @@
 [package]
 name = "cinefractal"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2024"
 license = "MIT"
 authors = ['Christoph Lürig <christoph.luerig@gmail.com>']
 homepage = "https://github.com/Carbonfreezer/cinefractal"
 description = "This module provides functionality to generate images and movies from fractals. It has three main building blocks. One for generating fractal images, one for animation and one for finding interesting focus points."
-
+keywords = ["fractals", "animation", "rust"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]

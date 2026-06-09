@@ -37,7 +37,7 @@ The library has three main building blocks:
 pip install cinefractal
 ```
 
-Cinefractal requires Python 3.8+ and pulls in NumPy automatically. The bundled
+Cinefractal requires Python 3.13+ and pulls in NumPy automatically. The bundled
 examples additionally use, depending on what they do:
 
 ```bash
